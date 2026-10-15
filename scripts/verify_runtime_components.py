@@ -12,13 +12,14 @@ QT_FAMILIES = {
     "Qml": "qtdeclarative", "QmlMeta": "qtdeclarative", "QmlModels": "qtdeclarative",
     "QmlWorkerScript": "qtdeclarative", "Quick": "qtdeclarative", "QuickWidgets": "qtdeclarative",
     "SerialPort": "qtserialport", "Svg": "qtsvg", "WebChannel": "qtwebchannel",
-    "WebEngineCore": "qtwebengine", "WebEngineWidgets": "qtwebengine",
+    "WebEngineCore": "qtwebengine", "WebEngineWidgets": "qtwebengine", "Pdf": "qtwebengine",
 }
 PLUGIN_FAMILIES = {
     "generic/qtuiotouchplugin.dll": "qtbase",
     "iconengines/qsvgicon.dll": "qtsvg",
     "imageformats/qgif.dll": "qtbase", "imageformats/qico.dll": "qtbase", "imageformats/qjpeg.dll": "qtbase",
     "imageformats/qicns.dll": "qtimageformats", "imageformats/qsvg.dll": "qtsvg",
+    "imageformats/qpdf.dll": "qtwebengine",
     "imageformats/qtga.dll": "qtimageformats", "imageformats/qtiff.dll": "qtimageformats",
     "imageformats/qwbmp.dll": "qtimageformats", "imageformats/qwebp.dll": "qtimageformats",
     "networkinformation/qnetworklistmanager.dll": "qtbase",
