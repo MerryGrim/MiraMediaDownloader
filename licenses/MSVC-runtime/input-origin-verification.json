@@ -1,0 +1,160 @@
+[
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/concrt140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "0cc696d9a39a39862c31b0b2a12187efd6203a24960dc69726d1c231e3d14293"
+  },
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/msvcp140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "4c667b706893593812cd111b369ba6a77f54d1f1b1ae87cf3bf37692663cfba2"
+  },
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/msvcp140_1.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "d419d24b0a76366f5c9d908b0e45fe70e9e9154bb8ad5f3de42070f2337f857b"
+  },
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/msvcp140_2.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "89917964abb6ca16a260cab258e180c3abc239b5af00eed659d0edf0efdd339c"
+  },
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/msvcp140_codecvt_ids.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "8294cb4ab550197b13994113b743f4cd40242ab4e7c0712723f973ca0324bc56"
+  },
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/vcamp140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "6f1fefc6fa83e632c4c99e0503e6a3e1e8cfc36c71a8fd29e36fafbc070a4e85"
+  },
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/vccorlib140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "121dde20d95e7dee25d6a7a42a4cce2a2ed77c67772b1e2e02ff5b487036e4f2"
+  },
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/vcomp140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "e20ec339b69a7a4bc9b80ad14c0a0000f01eb7683d1262fea2adff9a2dc5d9e6"
+  },
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/vcruntime140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "f893ae75a1a24eea174d982f94bc80ce2448201eaa919a73c0653a5657685de4"
+  },
+  {
+    "package": "PySide6-Essentials",
+    "version": "6.11.2",
+    "file": "PySide6/vcruntime140_1.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "48aa2783793ea18ab3c2c71d420d4fff9814e662a1ff810053c6e5250061a716"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/concrt140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "b724ef089cb22625e3281da4b6f7513381eef726ea73e4ee8a875d6749e61a24"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/msvcp140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "fd4a8c046fa3fea9ca6132f50cf8a56cf1e783b2d3093ba5c85fa063bc6b3845"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/msvcp140_1.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "7f556f0a0b944df7b64b916b344a070b7e6f6cf342194475594447ca88c07659"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/msvcp140_2.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "720091576d0e2669d16e8ad203a1f81a7c0811a6906452964d6e5fcb28a8de4d"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/msvcp140_codecvt_ids.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "e5fd27e8f57810eb40196a7ce5bff7bccc01ea4663e0d3af073539c26604cfa9"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/vcamp140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "ebbd56b4f03091a8bd074aa0de9f93f6884d8bb3da5d0375ec08cbe18eede619"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/vccorlib140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "de937dcaf545a60a789c261143883de681be95a70789010b47c541d68cc25ec5"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/vcomp140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "2407d7152d585a8ecc701454b2903db3b1abaca31b4288ae4fbf905f06d5a0f1"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/vcruntime140.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "de617641d82eac15595d2e39394163ac33e49bb032cf2c2ea0044ed39d3675e9"
+  },
+  {
+    "package": "shiboken6",
+    "version": "6.11.2",
+    "file": "shiboken6/vcruntime140_1.dll",
+    "record_sha256_matches": true,
+    "actual_sha256": "fa577d54bd10a91e52472da784a619da6cf241af45f0a0c48b27e91fa0fe6104"
+  },
+  {
+    "package": "official-cpython-nuget",
+    "version": "3.14.8",
+    "source_url": "https://api.nuget.org/v3-flatcontainer/python/3.14.8/python.3.14.8.nupkg",
+    "package_sha256": "ce85f674d9a63029f709cbff7a3da1c6bc5bfcfaefdd9999f98fa0290470c454",
+    "member": "tools/vcruntime140.dll",
+    "archive_bytes_match": true,
+    "actual_sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7"
+  },
+  {
+    "package": "official-cpython-nuget",
+    "version": "3.14.8",
+    "source_url": "https://api.nuget.org/v3-flatcontainer/python/3.14.8/python.3.14.8.nupkg",
+    "package_sha256": "ce85f674d9a63029f709cbff7a3da1c6bc5bfcfaefdd9999f98fa0290470c454",
+    "member": "tools/vcruntime140_1.dll",
+    "archive_bytes_match": true,
+    "actual_sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e"
+  }
+]

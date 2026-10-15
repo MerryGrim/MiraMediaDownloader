@@ -1,0 +1,67 @@
+{
+  "purpose": "Qt/PySide/software OpenGL corresponding-source provision for Mira 1.4.4; original upstream sources and build scripts are preserved.",
+  "archives": [
+    {
+      "component": "Qt 6.11.2 (complete source including WebEngine/Chromium)",
+      "file": "qt-everywhere-src-6.11.2.tar.xz",
+      "bytes": 1019661552,
+      "sha256": "6dcfbca271d76a6502741a2c0dc6fc98ef7dd0b7b4cfd0abcebb285a86a26f33",
+      "url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/single/qt-everywhere-src-6.11.2.tar.xz"
+    },
+    {
+      "component": "PySide6 / Shiboken6 6.11.2",
+      "file": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "bytes": 18053248,
+      "sha256": "cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8",
+      "url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/pyside-setup-everywhere-src-6.11.2.tar.xz"
+    },
+    {
+      "component": "Mesa 11.2.2",
+      "file": "mesa-mesa-11.2.2.tar.gz",
+      "url": "https://gitlab.freedesktop.org/mesa/mesa/-/archive/mesa-11.2.2/mesa-mesa-11.2.2.tar.gz",
+      "source_commit": "3a9f6283f435f90ca1a2901be39ec9d629c95bb6",
+      "sha256": "a2edf7ad2589f0c3b5cd3d8f8866193c03bf871a38d5dc27423a03f352abe2de",
+      "bytes": 10651818
+    },
+    {
+      "component": "LLVM 3.6.2",
+      "file": "llvm-3.6.2.src.tar.xz",
+      "url": "https://releases.llvm.org/3.6.2/llvm-3.6.2.src.tar.xz",
+      "sha256": "f60dc158bfda6822de167e87275848969f0558b3134892ff54fced87e4667b94",
+      "bytes": 12802380
+    }
+  ],
+  "official_windows_wheels": [
+    {
+      "distribution": "PySide6-Essentials",
+      "version": "6.11.2",
+      "file": "pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl",
+      "bytes": 76913043,
+      "sha256": "c8a29def77032773a30879f7f24415b5395ad08592d147c170824ef4c735dfc1",
+      "url": "https://files.pythonhosted.org/packages/dc/09/d2662684aee4d3f027ff9b1e965f22301bc28ffc5b7f167658508e4475dc/pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl",
+      "source_archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "underlying_qt_source": "qt-everywhere-src-6.11.2.tar.xz"
+    },
+    {
+      "distribution": "PySide6-Addons",
+      "version": "6.11.2",
+      "file": "pyside6_addons-6.11.2-cp310-abi3-win_amd64.whl",
+      "bytes": 168208836,
+      "sha256": "f449ea4431da20e7b86752cca8d166f93434516fe417f981c27e5f8e1b554407",
+      "url": "https://files.pythonhosted.org/packages/fb/c1/08bf6594101b42fc88834009f1dac59a983c5b6805c62c5081f077d09b4a/pyside6_addons-6.11.2-cp310-abi3-win_amd64.whl",
+      "source_archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "underlying_qt_source": "qt-everywhere-src-6.11.2.tar.xz"
+    },
+    {
+      "distribution": "shiboken6",
+      "version": "6.11.2",
+      "file": "shiboken6-6.11.2-cp310-abi3-win_amd64.whl",
+      "bytes": 1226578,
+      "sha256": "6ab0eba1c904455df621f9a6df3ca2bb896bab8670572d2bc4e37804ae91f19a",
+      "url": "https://files.pythonhosted.org/packages/ce/6b/fee1b4814317e4664e318644c9c007676c65a71e5b2b9d3ac4121a94dc0a/shiboken6-6.11.2-cp310-abi3-win_amd64.whl",
+      "source_archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "underlying_qt_source": "qt-everywhere-src-6.11.2.tar.xz"
+    }
+  ],
+  "notes": "Qt-authored runtime modules select their offered GPLv2 option; upstream third-party notices and source licences remain unchanged. The archives are complete exact-version upstream sources; this is not a claim of independently reproducing Qt binaries bit-for-bit. Qt full source includes Chromium. Mesa/LLVM binary identity section hashes and source notes are supplied separately."
+}

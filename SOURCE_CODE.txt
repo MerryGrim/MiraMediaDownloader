@@ -1,0 +1,38 @@
+Mira Media Downloader 1.4.4 - source code accompanying this release
+
+Application license: GNU GPL version 2 or (at your option) any later version,
+with the additional permission for Mira's original code in COPYRIGHT.
+Third-party components retain their respective licenses. See LICENSE,
+THIRD_PARTY_NOTICES.md, licenses/ and docs/DEPENDENCY_PERMISSION.md.
+
+Complete application and dependency source is provided alongside the Windows
+packages, at the same public download location:
+https://github.com/MerryGrim/MiraMediaDownloader/releases/tag/v1.4.4
+
+Download BOTH source archives:
+  MiraMediaDownloader-1.4.4-Source.zip
+  MiraMediaDownloader-1.4.4-DependencySources.zip
+
+The first contains Mira's source, tests and build/install scripts. The second
+contains the upstream source archives, their original notices/build scripts,
+provenance and checksum manifests for the supplied runtime components,
+including Qt/PySide/WebEngine/Chromium, gallery-dl and Python dependencies.
+SHA256SUMS-1.4.4.txt at the same release checks all published archives.
+
+README.md, scripts/build.ps1, scripts/build-launcher.ps1 and
+scripts/build-installer.ps1 describe/build the Windows application and installer.
+The dependency source companion includes instructions for upstream source
+trees and the build environment. No Mira modifications to third-party runtime
+source were made. Packaging excludes unused Qt Virtual Keyboard components.
+
+The sources can be downloaded without an account, payment or source-request
+procedure. Preserve this notice and the relevant source access when conveying
+the binary. This is direct source distribution, not a written future offer.
+
+Repository: https://github.com/MerryGrim/MiraMediaDownloader
+This software is supplied without warranty; see LICENSE.
+
+Microsoft VC++ x64 Runtime is a separately installed Windows prerequisite;
+its proprietary DLLs are excluded from Mira's executable/portable packages.
+The source companion covers the distributed open-source components, not
+Microsoft Windows or the separately installed Microsoft system runtime.

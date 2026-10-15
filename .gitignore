@@ -1,0 +1,58 @@
+# Local runtimes and generated build/release output
+.venv/
+venv/
+build/
+dist/
+runtime/
+outputs/
+output/
+work/
+*.exe
+*.dll
+*.pyd
+*.zip
+
+# Public repository contains Mira sources, not vendored dependency archives.
+/third_party_sources/
+
+# Python/test caches
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+*.pyc
+
+# User sessions, credentials and browser exports (never source assets)
+.env
+.env.*
+!.env.example
+*cookies*.txt
+*.cookies
+*.dpapi
+*.dpapi.tmp
+tokens/
+secrets/
+token*.txt
+token*.json
+credentials*.json
+browser-profile/
+browser-profiles/
+
+# Local libraries, history/checkpoints and logs
+.mira/
+*.part
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+*.db
+*.db-*
+*.log
+logs/
+job-*.json
+
+# Native compiler intermediates
+*.obj
+*.res
+*.pdb
+*.ilk

@@ -1,0 +1,45 @@
+Mira Media Downloader
+Copyright (C) 2026 Mira Media Downloader contributors
+
+The original application source, tests, build scripts and documentation are
+free software: you can redistribute them and/or modify them under the terms
+of the GNU General Public License as published by the Free Software Foundation,
+either version 2 of the License, or (at your option) any later version.
+
+SPDX-License-Identifier: GPL-2.0-or-later
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See LICENSE for the full GNU GPL version 2 text.
+
+This grant covers the project's original contributions only. Third-party
+license texts, metadata and attribution documents under licenses/ retain
+their own copyright notices and licenses. Project artwork provenance and
+reuse information are documented in assets/ARTWORK.md. No rights to website
+content, downloaded images or platform trademarks are granted here.
+
+Additional permission for required runtime libraries
+--------------------------------------------------
+
+In addition to the permissions of the GNU General Public License, version 2
+or any later version, the copyright holders of the original Mira Media
+Downloader code give permission to link or combine that code with Requests,
+PySide6, Shiboken6, Qt, Qt WebEngine, Chromium, Microsoft Visual C++ runtime,
+and their required runtime
+dependencies identified in the release's third-party component manifest,
+under those components' respective licenses, and to copy and distribute the
+resulting combination subject to the GNU GPL for the original Mira code and
+the applicable terms for the other components.
+
+This additional permission applies only to the original Mira code covered
+by this notice. It grants no permission on behalf of third-party copyright
+holders, does not relicense third-party code, and does not waive applicable
+corresponding-source, copyright-notice or other license obligations. If you
+modify the original Mira code, you may extend this permission to your
+changes, but you are not required to do so.
+
+Windows packages contain third-party runtime components under their own
+terms. Dependency selection and the scope of this permission are documented
+in docs/DEPENDENCY_PERMISSION.md, docs/LICENSING.md and
+THIRD_PARTY_NOTICES.md. Preserve the accompanying licenses, attribution
+records and corresponding source when redistributing a release.

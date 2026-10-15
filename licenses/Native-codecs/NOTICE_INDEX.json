@@ -1,0 +1,906 @@
+[
+  {
+    "component": "altgraph",
+    "version": "0.17.5",
+    "archive": "archives/altgraph-0.17.5.tar.gz",
+    "source_member": "altgraph-0.17.5/LICENSE",
+    "notice": "notices/altgraph-0.17.5/42f457184d-LICENSE",
+    "sha256": "6c194d6db0c64d45535d10c95142b9b0cda7b7dcc7f1ddee302b3d536f3dbe46"
+  },
+  {
+    "component": "altgraph",
+    "version": "0.17.5",
+    "archive": "archives/altgraph-0.17.5.tar.gz",
+    "source_member": "altgraph-0.17.5/doc/license.rst",
+    "notice": "notices/altgraph-0.17.5/efc2f13cd6-license.rst",
+    "sha256": "c6071929fa693cf77461fdfcba69b98ffc76e2600d264adb09d04abd45c8b2c5"
+  },
+  {
+    "component": "certifi",
+    "version": "2026.7.22",
+    "archive": "archives/certifi-2026.7.22.tar.gz",
+    "source_member": "certifi-2026.7.22/LICENSE",
+    "notice": "notices/certifi-2026.7.22/994ba7456a-LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+  },
+  {
+    "component": "charset-normalizer",
+    "version": "3.5.2",
+    "archive": "archives/charset_normalizer-3.5.2.tar.gz",
+    "source_member": "charset_normalizer-3.5.2/LICENSE",
+    "notice": "notices/charset-normalizer-3.5.2/aa239bc3af-LICENSE",
+    "sha256": "6d0d41bfe170ac6c7dc248c9a63e254d0fb45a60d50a8257d0af92c6e249b887"
+  },
+  {
+    "component": "charset-normalizer",
+    "version": "3.5.2",
+    "archive": "archives/charset_normalizer-3.5.2.tar.gz",
+    "source_member": "charset_normalizer-3.5.2/data/NOTICE.md",
+    "notice": "notices/charset-normalizer-3.5.2/2f08f5e6a7-NOTICE.md",
+    "sha256": "0cb3efcfd8f7a02a337e98dc3de4b0b57424d7208a332b26e7deb8cb94c13922"
+  },
+  {
+    "component": "gallery-dl",
+    "version": "1.32.16",
+    "archive": "archives/gallery_dl-1.32.16.tar.gz",
+    "source_member": "gallery_dl-1.32.16/LICENSE",
+    "notice": "notices/gallery-dl-1.32.16/5344db38a9-LICENSE",
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+  },
+  {
+    "component": "idna",
+    "version": "3.20",
+    "archive": "archives/idna-3.20.tar.gz",
+    "source_member": "idna-3.20/LICENSE.md",
+    "notice": "notices/idna-3.20/d3f3407ca5-LICENSE.md",
+    "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+  },
+  {
+    "component": "pefile",
+    "version": "2024.8.26",
+    "archive": "archives/pefile-2024.8.26.tar.gz",
+    "source_member": "pefile-2024.8.26/LICENSE",
+    "notice": "notices/pefile-2024.8.26/150c9f9c49-LICENSE",
+    "sha256": "b44409c067c6da52bfb54bb6624fb11a7b52157c3a13ae1400232f8196e86ad3"
+  },
+  {
+    "component": "Pillow",
+    "version": "12.3.0",
+    "archive": "archives/pillow-12.3.0.tar.gz",
+    "source_member": "pillow-12.3.0/LICENSE",
+    "notice": "notices/Pillow-12.3.0/d5dd74299e-LICENSE",
+    "sha256": "15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b"
+  },
+  {
+    "component": "Pillow",
+    "version": "12.3.0",
+    "archive": "archives/pillow-12.3.0.tar.gz",
+    "source_member": "pillow-12.3.0/Tests/fonts/DejaVuSans/LICENSE.txt",
+    "notice": "notices/Pillow-12.3.0/f1d9675165-LICENSE.txt",
+    "sha256": "ba4aee7ef5b2ebc285e76df2497953d8a6e7480bc249f4e0a55f1199a3396622"
+  },
+  {
+    "component": "Pillow",
+    "version": "12.3.0",
+    "archive": "archives/pillow-12.3.0.tar.gz",
+    "source_member": "pillow-12.3.0/Tests/fonts/LICENSE.txt",
+    "notice": "notices/Pillow-12.3.0/4c5005a05a-LICENSE.txt",
+    "sha256": "b79f6f6a2fc060b2e0a6e7a6946c446ae199bec07b92a3df1295975e25c4d96b"
+  },
+  {
+    "component": "Pillow",
+    "version": "12.3.0",
+    "archive": "archives/pillow-12.3.0.tar.gz",
+    "source_member": "pillow-12.3.0/Tests/icc/LICENSE.txt",
+    "notice": "notices/Pillow-12.3.0/9b30a8c854-LICENSE.txt",
+    "sha256": "09e62757edb34e284bc11c54e3429b438d9db37f46c9cb36bd57b1b25ae36184"
+  },
+  {
+    "component": "Pillow",
+    "version": "12.3.0",
+    "archive": "archives/pillow-12.3.0.tar.gz",
+    "source_member": "pillow-12.3.0/docs/COPYING",
+    "notice": "notices/Pillow-12.3.0/18977dccfc-COPYING",
+    "sha256": "d44ce2bbf81806be0eb34ec0ecb0cb013ccd56a94057daf214fb7381adde8f0c"
+  },
+  {
+    "component": "Pillow",
+    "version": "12.3.0",
+    "archive": "archives/pillow-12.3.0.tar.gz",
+    "source_member": "pillow-12.3.0/src/thirdparty/raqm/COPYING",
+    "notice": "notices/Pillow-12.3.0/23cdf78d36-COPYING",
+    "sha256": "4a574f631d5aee5223d108d3f7ec4f717343685d8a8904f42591be72c907ecba"
+  },
+  {
+    "component": "pycryptodomex",
+    "version": "3.24.1",
+    "archive": "archives/pycryptodomex-3.24.1.tar.gz",
+    "source_member": "pycryptodomex-3.24.1/Doc/LEGAL/COPYRIGHT.pycrypto",
+    "notice": "notices/pycryptodomex-3.24.1/141f1c648a-COPYRIGHT.pycrypto",
+    "sha256": "8e563c767164faa0831a333b57d23d4311cf566eb1b15d93250f4606be4eb549"
+  },
+  {
+    "component": "pycryptodomex",
+    "version": "3.24.1",
+    "archive": "archives/pycryptodomex-3.24.1.tar.gz",
+    "source_member": "pycryptodomex-3.24.1/Doc/LEGAL/copy/LICENSE.libtom",
+    "notice": "notices/pycryptodomex-3.24.1/4e76ce4e2d-LICENSE.libtom",
+    "sha256": "10c41e1aaf84bd3546d1ff7ef89454817744fd2c18cdd80a137e802095448016"
+  },
+  {
+    "component": "pycryptodomex",
+    "version": "3.24.1",
+    "archive": "archives/pycryptodomex-3.24.1.tar.gz",
+    "source_member": "pycryptodomex-3.24.1/Doc/LEGAL/copy/LICENSE.orig",
+    "notice": "notices/pycryptodomex-3.24.1/e3ba3e4ac8-LICENSE.orig",
+    "sha256": "96f9a25274a59843715a26986e4a2427c312a1d86b9207f26fcafcea47a417fe"
+  },
+  {
+    "component": "pycryptodomex",
+    "version": "3.24.1",
+    "archive": "archives/pycryptodomex-3.24.1.tar.gz",
+    "source_member": "pycryptodomex-3.24.1/Doc/LEGAL/copy/LICENSE.python-2.2",
+    "notice": "notices/pycryptodomex-3.24.1/9421a9c2bb-LICENSE.python-2.2",
+    "sha256": "253a271c681cd4b3f9503659fe754ee305efe68ebb6e8733b7f436d73845a32c"
+  },
+  {
+    "component": "pycryptodomex",
+    "version": "3.24.1",
+    "archive": "archives/pycryptodomex-3.24.1.tar.gz",
+    "source_member": "pycryptodomex-3.24.1/Doc/src/license.rst",
+    "notice": "notices/pycryptodomex-3.24.1/5b116a5fe1-license.rst",
+    "sha256": "90f7f2fe5827666516bc10bd27036491290d77662818eace211e007422f59d02"
+  },
+  {
+    "component": "pycryptodomex",
+    "version": "3.24.1",
+    "archive": "archives/pycryptodomex-3.24.1.tar.gz",
+    "source_member": "pycryptodomex-3.24.1/LICENSE.rst",
+    "notice": "notices/pycryptodomex-3.24.1/10595bcfd2-LICENSE.rst",
+    "sha256": "4e04660d77c1c64e89d79537919fb8240fa21484a7e3db29f358b2c7f84ea073"
+  },
+  {
+    "component": "pyinstaller",
+    "version": "6.22.3",
+    "archive": "archives/pyinstaller-6.22.3.tar.gz",
+    "source_member": "pyinstaller-6.22.3/bootloader/waflib/LICENSE",
+    "notice": "notices/pyinstaller-6.22.3/11206aeb89-LICENSE",
+    "sha256": "f1a08e9a6ef535799105fca437e0fb38dc64acb0f224b115ab38fdc458cede53"
+  },
+  {
+    "component": "pyinstaller",
+    "version": "6.22.3",
+    "archive": "archives/pyinstaller-6.22.3.tar.gz",
+    "source_member": "pyinstaller-6.22.3/bootloader/zlib/LICENSE",
+    "notice": "notices/pyinstaller-6.22.3/fef942ede6-LICENSE",
+    "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+  },
+  {
+    "component": "pyinstaller",
+    "version": "6.22.3",
+    "archive": "archives/pyinstaller-6.22.3.tar.gz",
+    "source_member": "pyinstaller-6.22.3/doc/license.rst",
+    "notice": "notices/pyinstaller-6.22.3/8af4d39e64-license.rst",
+    "sha256": "98be0224c3df051092249a1b1387ef3f6fd01d6d87eb263266244a2237bb7ce3"
+  },
+  {
+    "component": "pyinstaller",
+    "version": "6.22.3",
+    "archive": "archives/pyinstaller-6.22.3.tar.gz",
+    "source_member": "pyinstaller-6.22.3/COPYING.txt",
+    "notice": "notices/pyinstaller-6.22.3/87df3e7f01-COPYING.txt",
+    "sha256": "0598064c7d2718e38d7914a7d08343b2fa008e3bea9ebba2aa7a6ffa5900dd64"
+  },
+  {
+    "component": "pyinstaller-hooks-contrib",
+    "version": "2026.8",
+    "archive": "archives/pyinstaller_hooks_contrib-2026.8.tar.gz",
+    "source_member": "pyinstaller_hooks_contrib-2026.8/LICENSE",
+    "notice": "notices/pyinstaller-hooks-contrib-2026.8/56a0967dc7-LICENSE",
+    "sha256": "91d0baaff00773038e72c0a1fc9d5d2d38706b7a2b9c04f34296608f931b9cd0"
+  },
+  {
+    "component": "pywin32-ctypes",
+    "version": "0.2.3",
+    "archive": "archives/pywin32-ctypes-0.2.3.tar.gz",
+    "source_member": "pywin32-ctypes-0.2.3/LICENSE.txt",
+    "notice": "notices/pywin32-ctypes-0.2.3/12af30d5fc-LICENSE.txt",
+    "sha256": "dfa83b3e2709adfcdb838d9ad55823ca674abb780e60563d9dd9544ccbf785e9"
+  },
+  {
+    "component": "requests",
+    "version": "2.34.2",
+    "archive": "archives/requests-2.34.2.tar.gz",
+    "source_member": "requests-2.34.2/LICENSE",
+    "notice": "notices/requests-2.34.2/85803e3ee9-LICENSE",
+    "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+  },
+  {
+    "component": "requests",
+    "version": "2.34.2",
+    "archive": "archives/requests-2.34.2.tar.gz",
+    "source_member": "requests-2.34.2/NOTICE",
+    "notice": "notices/requests-2.34.2/bed17f5749-NOTICE",
+    "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc"
+  },
+  {
+    "component": "urllib3",
+    "version": "2.8.0",
+    "archive": "archives/urllib3-2.8.0.tar.gz",
+    "source_member": "urllib3-2.8.0/LICENSE.txt",
+    "notice": "notices/urllib3-2.8.0/eba3292f3e-LICENSE.txt",
+    "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "LICENSE",
+    "notice": "notices/aom-3.14.1/c693279643-LICENSE",
+    "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "PATENTS",
+    "notice": "notices/aom-3.14.1/c0e9326143-PATENTS",
+    "sha256": "661fb8e504744e95587b556b94a58343448300606a41bea8c7a9b97125696e61"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "third_party/fastfeat/LICENSE",
+    "notice": "notices/aom-3.14.1/63bac9a337-LICENSE",
+    "sha256": "499041ddee5227b6f29ca06c17803e5fe24d60f243c69635cd76b7ba08d0ddd5"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "third_party/googletest/src/LICENSE",
+    "notice": "notices/aom-3.14.1/aa1554d241-LICENSE",
+    "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "third_party/highway/LICENSE-BSD3",
+    "notice": "notices/aom-3.14.1/ddfacaa94f-LICENSE-BSD3",
+    "sha256": "d25e82e26acd42ca3ccc9993622631163425b869b9e16284226d534cff6470f2"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "third_party/libwebm/LICENSE.TXT",
+    "notice": "notices/aom-3.14.1/b59b5ef163-LICENSE.TXT",
+    "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "third_party/libwebm/PATENTS.TXT",
+    "notice": "notices/aom-3.14.1/14f8249a11-PATENTS.TXT",
+    "sha256": "cc3273e0694ea5896145e0677699b53471b03ea43021ddc50e7923fbb9f5023c"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "third_party/libyuv/LICENSE",
+    "notice": "notices/aom-3.14.1/fb99dad6dd-LICENSE",
+    "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "third_party/vector/LICENSE",
+    "notice": "notices/aom-3.14.1/1e89d0adc7-LICENSE",
+    "sha256": "ff6c857ce2708e87701323078aef115c1872a1f80a9649f86dc899b48083bc60"
+  },
+  {
+    "component": "aom",
+    "version": "3.14.1",
+    "archive": "native-archives/aom-3.14.1.tar.gz",
+    "source_member": "third_party/x86inc/LICENSE",
+    "notice": "notices/aom-3.14.1/23c6a4e21b-LICENSE",
+    "sha256": "719d8fa235f2068e0ae6d6a7dceb0a7720d7840f0f0ebed29957989e6ded3cd8"
+  },
+  {
+    "component": "brotli",
+    "version": "1.2.0",
+    "archive": "native-archives/brotli-1.2.0.tar.gz",
+    "source_member": "brotli-1.2.0/LICENSE",
+    "notice": "notices/brotli-1.2.0/1c35946687-LICENSE",
+    "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+  },
+  {
+    "component": "bzip2-python-source-deps",
+    "version": "1.0.8",
+    "archive": "native-archives/python-bzip2-1.0.8.tar.gz",
+    "source_member": "cpython-source-deps-bzip2-1.0.8/LICENSE",
+    "notice": "notices/bzip2-python-source-deps-1.0.8/fac89e17ed-LICENSE",
+    "sha256": "c6dbbf828498be844a89eaa3b84adbab3199e342eb5cb2ed2f0d4ba7ec0f38a3"
+  },
+  {
+    "component": "dav1d",
+    "version": "1.5.3",
+    "archive": "native-archives/dav1d-1.5.3.tar.xz",
+    "source_member": "dav1d-1.5.3/COPYING",
+    "notice": "notices/dav1d-1.5.3/9df8795659-COPYING",
+    "sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5"
+  },
+  {
+    "component": "dav1d",
+    "version": "1.5.3",
+    "archive": "native-archives/dav1d-1.5.3.tar.xz",
+    "source_member": "dav1d-1.5.3/doc/PATENTS",
+    "notice": "notices/dav1d-1.5.3/a7301450e3-PATENTS",
+    "sha256": "335eca574598bf4ca181b12f708d6669e5a5e78c8e1513e5b35fa1f03901484b"
+  },
+  {
+    "component": "freetype",
+    "version": "2.14.3",
+    "archive": "native-archives/freetype-2.14.3.tar.gz",
+    "source_member": "freetype-2.14.3/docs/GPLv2.TXT",
+    "notice": "notices/freetype-2.14.3/712bbf6128-GPLv2.TXT",
+    "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18"
+  },
+  {
+    "component": "freetype",
+    "version": "2.14.3",
+    "archive": "native-archives/freetype-2.14.3.tar.gz",
+    "source_member": "freetype-2.14.3/docs/FTL.TXT",
+    "notice": "notices/freetype-2.14.3/51ba350e73-FTL.TXT",
+    "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f"
+  },
+  {
+    "component": "freetype",
+    "version": "2.14.3",
+    "archive": "native-archives/freetype-2.14.3.tar.gz",
+    "source_member": "freetype-2.14.3/LICENSE.TXT",
+    "notice": "notices/freetype-2.14.3/5316fd2a32-LICENSE.TXT",
+    "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+  },
+  {
+    "component": "harfbuzz",
+    "version": "14.2.1",
+    "archive": "native-archives/harfbuzz-14.2.1.tar.xz",
+    "source_member": "harfbuzz-14.2.1/COPYING",
+    "notice": "notices/harfbuzz-14.2.1/a269ea184e-COPYING",
+    "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64"
+  },
+  {
+    "component": "harfbuzz",
+    "version": "14.2.1",
+    "archive": "native-archives/harfbuzz-14.2.1.tar.xz",
+    "source_member": "harfbuzz-14.2.1/src/ms-use/COPYING",
+    "notice": "notices/harfbuzz-14.2.1/ead6635f2d-COPYING",
+    "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+  },
+  {
+    "component": "harfbuzz",
+    "version": "14.2.1",
+    "archive": "native-archives/harfbuzz-14.2.1.tar.xz",
+    "source_member": "harfbuzz-14.2.1/test/COPYING",
+    "notice": "notices/harfbuzz-14.2.1/af90f24970-COPYING",
+    "sha256": "9b35b8485f69cd298fccbb3c40a827dc06cf1185553bef827903497d2944a8d7"
+  },
+  {
+    "component": "harfbuzz",
+    "version": "14.2.1",
+    "archive": "native-archives/harfbuzz-14.2.1.tar.xz",
+    "source_member": "harfbuzz-14.2.1/test/shape/data/aots/COPYING",
+    "notice": "notices/harfbuzz-14.2.1/3699a3e61d-COPYING",
+    "sha256": "f55f74bf740db07bb032a90aa74af4307adea3d489c1ccba12453cf0c0a764cb"
+  },
+  {
+    "component": "harfbuzz",
+    "version": "14.2.1",
+    "archive": "native-archives/harfbuzz-14.2.1.tar.xz",
+    "source_member": "harfbuzz-14.2.1/test/shape/data/text-rendering-tests/COPYING",
+    "notice": "notices/harfbuzz-14.2.1/a080a9cc49-COPYING",
+    "sha256": "d24039e4d22c9bc72096f6174374539d92a3d6e1163938546ec59179fe095e6f"
+  },
+  {
+    "component": "lcms2",
+    "version": "2.19.1",
+    "archive": "native-archives/lcms2-2.19.1.tar.gz",
+    "source_member": "lcms2-2.19.1/LICENSE",
+    "notice": "notices/lcms2-2.19.1/1d22029abb-LICENSE",
+    "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31"
+  },
+  {
+    "component": "lcms2",
+    "version": "2.19.1",
+    "archive": "native-archives/lcms2-2.19.1.tar.gz",
+    "source_member": "lcms2-2.19.1/plugins/fast_float/COPYING.GPL3",
+    "notice": "notices/lcms2-2.19.1/7ff6e58bf8-COPYING.GPL3",
+    "sha256": "c53a65c2fd561c87eaabf1072ef5dcab8653042bc15308465f52413585eb6271"
+  },
+  {
+    "component": "lcms2",
+    "version": "2.19.1",
+    "archive": "native-archives/lcms2-2.19.1.tar.gz",
+    "source_member": "lcms2-2.19.1/plugins/threaded/COPYING.GPL3",
+    "notice": "notices/lcms2-2.19.1/f1be312cb9-COPYING.GPL3",
+    "sha256": "c53a65c2fd561c87eaabf1072ef5dcab8653042bc15308465f52413585eb6271"
+  },
+  {
+    "component": "lcms2",
+    "version": "2.19.1",
+    "archive": "native-archives/lcms2-2.19.1.tar.gz",
+    "source_member": "lcms2-2.19.1/utils/jpgicc/LICENSE_iccjpeg",
+    "notice": "notices/lcms2-2.19.1/438dbc44fd-LICENSE_iccjpeg",
+    "sha256": "8baac37d14eed89b82ffcb041677dd701164eb5cc0f26e165fe47eb11afa0dca"
+  },
+  {
+    "component": "libavif",
+    "version": "1.4.2",
+    "archive": "native-archives/libavif-1.4.2.tar.gz",
+    "source_member": "libavif-1.4.2/LICENSE",
+    "notice": "notices/libavif-1.4.2/32ab201edd-LICENSE",
+    "sha256": "165abf92cc04b39e80d29cadea7a6a7e8fddf59407d4ad2616507a7ebe8216f9"
+  },
+  {
+    "component": "libffi-python-source-deps",
+    "version": "3.4.4",
+    "archive": "native-archives/python-libffi-3.4.4.tar.gz",
+    "source_member": "cpython-source-deps-libffi-3.4.4/LICENSE",
+    "notice": "notices/libffi-python-source-deps-3.4.4/a048eb8ae4-LICENSE",
+    "sha256": "2c9c2acb9743e6b007b91350475308aee44691d96aa20eacef8e199988c8c388"
+  },
+  {
+    "component": "libffi-python-source-deps",
+    "version": "3.4.4",
+    "archive": "native-archives/python-libffi-3.4.4.tar.gz",
+    "source_member": "cpython-source-deps-libffi-3.4.4/LICENSE-BUILDTOOLS",
+    "notice": "notices/libffi-python-source-deps-3.4.4/1f618318f7-LICENSE-BUILDTOOLS",
+    "sha256": "e67978cd18816c0cb7d29aaaacde7b7447402c2fb321a051698890a8eaedda94"
+  },
+  {
+    "component": "libjpeg-turbo",
+    "version": "3.1.4.1",
+    "archive": "native-archives/libjpeg-turbo-3.1.4.1.tar.gz",
+    "source_member": "libjpeg-turbo-3.1.4.1/LICENSE.md",
+    "notice": "notices/libjpeg-turbo-3.1.4.1/f788783a58-LICENSE.md",
+    "sha256": "e10114e6e40f3d0311c401ca25245ac5ef459a43c20f976fd63f03e816f5741f"
+  },
+  {
+    "component": "libjpeg-turbo",
+    "version": "3.1.4.1",
+    "archive": "native-archives/libjpeg-turbo-3.1.4.1.tar.gz",
+    "source_member": "libjpeg-turbo-3.1.4.1/README.ijg",
+    "notice": "notices/libjpeg-turbo-3.1.4.1/c666aa90b8-README.ijg",
+    "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6"
+  },
+  {
+    "component": "libjpeg-turbo",
+    "version": "3.1.4.1",
+    "archive": "native-archives/libjpeg-turbo-3.1.4.1.tar.gz",
+    "source_member": "libjpeg-turbo-3.1.4.1/java/doc/legal/LICENSE",
+    "notice": "notices/libjpeg-turbo-3.1.4.1/5f82edbdf1-LICENSE",
+    "sha256": "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726"
+  },
+  {
+    "component": "libjpeg-turbo",
+    "version": "3.1.4.1",
+    "archive": "native-archives/libjpeg-turbo-3.1.4.1.tar.gz",
+    "source_member": "libjpeg-turbo-3.1.4.1/release/License.rtf",
+    "notice": "notices/libjpeg-turbo-3.1.4.1/e7ac9d4d7c-License.rtf",
+    "sha256": "d26120ab237f87dea10aa4fa7fd4243cadffd26e54eb2f3903d5fb0f8ed336b2"
+  },
+  {
+    "component": "libpng",
+    "version": "1.6.58",
+    "archive": "native-archives/libpng-1.6.58.tar.gz",
+    "source_member": "libpng-1.6.58/LICENSE",
+    "notice": "notices/libpng-1.6.58/1f1ed72fa7-LICENSE",
+    "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+  },
+  {
+    "component": "libpng",
+    "version": "1.6.58",
+    "archive": "native-archives/libpng-1.6.58.tar.gz",
+    "source_member": "libpng-1.6.58/ci/LICENSE_MIT.txt",
+    "notice": "notices/libpng-1.6.58/b14668f728-LICENSE_MIT.txt",
+    "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+  },
+  {
+    "component": "libpng",
+    "version": "1.6.58",
+    "archive": "native-archives/libpng-1.6.58.tar.gz",
+    "source_member": "libpng-1.6.58/contrib/gregbook/COPYING",
+    "notice": "notices/libpng-1.6.58/c40f63e997-COPYING",
+    "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572"
+  },
+  {
+    "component": "libpng",
+    "version": "1.6.58",
+    "archive": "native-archives/libpng-1.6.58.tar.gz",
+    "source_member": "libpng-1.6.58/contrib/gregbook/LICENSE",
+    "notice": "notices/libpng-1.6.58/4cb6ffbc6b-LICENSE",
+    "sha256": "b6a03c1803eb58ffb1f1278d5c7d4096c4c116e66dce8a7553e8c77d163c3438"
+  },
+  {
+    "component": "libpng",
+    "version": "1.6.58",
+    "archive": "native-archives/libpng-1.6.58.tar.gz",
+    "source_member": "libpng-1.6.58/contrib/pngexif/LICENSE_MIT.txt",
+    "notice": "notices/libpng-1.6.58/1ed98942b3-LICENSE_MIT.txt",
+    "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+  },
+  {
+    "component": "libpng",
+    "version": "1.6.58",
+    "archive": "native-archives/libpng-1.6.58.tar.gz",
+    "source_member": "libpng-1.6.58/contrib/pngminus/LICENSE.txt",
+    "notice": "notices/libpng-1.6.58/b442cde3b6-LICENSE.txt",
+    "sha256": "1806f1f10d393e9e377b3a8d1b968452b54f1a90378f14eeef45426946ace330"
+  },
+  {
+    "component": "libwebp",
+    "version": "1.6.0",
+    "archive": "native-archives/libwebp-1.6.0.tar.gz",
+    "source_member": "libwebp-1.6.0/PATENTS",
+    "notice": "notices/libwebp-1.6.0/9291173a15-PATENTS",
+    "sha256": "cc3273e0694ea5896145e0677699b53471b03ea43021ddc50e7923fbb9f5023c"
+  },
+  {
+    "component": "libwebp",
+    "version": "1.6.0",
+    "archive": "native-archives/libwebp-1.6.0.tar.gz",
+    "source_member": "libwebp-1.6.0/COPYING",
+    "notice": "notices/libwebp-1.6.0/deff4ccb52-COPYING",
+    "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+  },
+  {
+    "component": "libyuv",
+    "version": "644251f252a84bf8ce91ff0aca86a9b16b069ab8",
+    "archive": "native-archives/libyuv-644251f252a84bf8ce91ff0aca86a9b16b069ab8.tar.gz",
+    "source_member": "LICENSE",
+    "notice": "notices/libyuv-644251f252a84bf8ce91ff0aca86a9b16b069ab8/c693279643-LICENSE",
+    "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"
+  },
+  {
+    "component": "libyuv",
+    "version": "644251f252a84bf8ce91ff0aca86a9b16b069ab8",
+    "archive": "native-archives/libyuv-644251f252a84bf8ce91ff0aca86a9b16b069ab8.tar.gz",
+    "source_member": "PATENTS",
+    "notice": "notices/libyuv-644251f252a84bf8ce91ff0aca86a9b16b069ab8/c0e9326143-PATENTS",
+    "sha256": "4da84211f947c6f9f7dd8fbce513e1522e01833407ae732b8c9a2bbb75fed495"
+  },
+  {
+    "component": "mpdecimal-python-source-deps",
+    "version": "4.0.0",
+    "archive": "native-archives/python-mpdecimal-4.0.0.tar.gz",
+    "source_member": "cpython-source-deps-mpdecimal-4.0.0/COPYRIGHT.txt",
+    "notice": "notices/mpdecimal-python-source-deps-4.0.0/706790149d-COPYRIGHT.txt",
+    "sha256": "2713324211652ce4a60e6e21e54f9dc3004299e591b0933a352f1a89c5fb53c2"
+  },
+  {
+    "component": "mpdecimal-python-source-deps",
+    "version": "4.0.0",
+    "archive": "native-archives/python-mpdecimal-4.0.0.tar.gz",
+    "source_member": "cpython-source-deps-mpdecimal-4.0.0/doc/COPYRIGHT.txt",
+    "notice": "notices/mpdecimal-python-source-deps-4.0.0/1964b4c41d-COPYRIGHT.txt",
+    "sha256": "25329ef0e2a8823b88786a39f168304a65a3138f720ab39ffc1e9fbee67b74a9"
+  },
+  {
+    "component": "openjpeg",
+    "version": "2.5.4",
+    "archive": "native-archives/openjpeg-2.5.4.tar.gz",
+    "source_member": "openjpeg-2.5.4/LICENSE",
+    "notice": "notices/openjpeg-2.5.4/a342e269dd-LICENSE",
+    "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6"
+  },
+  {
+    "component": "openjpeg",
+    "version": "2.5.4",
+    "archive": "native-archives/openjpeg-2.5.4.tar.gz",
+    "source_member": "openjpeg-2.5.4/src/bin/wx/OPJViewer/source/license.txt",
+    "notice": "notices/openjpeg-2.5.4/7ed7086ed9-license.txt",
+    "sha256": "8081c33f6953950dcf424aa844714658b73ada0fcaea16e4487f5fa07ef0960d"
+  },
+  {
+    "component": "openjpeg",
+    "version": "2.5.4",
+    "archive": "native-archives/openjpeg-2.5.4.tar.gz",
+    "source_member": "openjpeg-2.5.4/thirdparty/astyle/LICENSE.md",
+    "notice": "notices/openjpeg-2.5.4/b1213451c2-LICENSE.md",
+    "sha256": "2e8480e753b7a1d100c80920f4250b1bc9f93a18c6a5953c42b11445218cd0fb"
+  },
+  {
+    "component": "openjpeg",
+    "version": "2.5.4",
+    "archive": "native-archives/openjpeg-2.5.4.tar.gz",
+    "source_member": "openjpeg-2.5.4/thirdparty/liblcms2/COPYING",
+    "notice": "notices/openjpeg-2.5.4/f0e5fc020b-COPYING",
+    "sha256": "c725daac91a9259ce5e195683c0eeb797d345035c36ac5ba114c9fa80e11639a"
+  },
+  {
+    "component": "openjpeg",
+    "version": "2.5.4",
+    "archive": "native-archives/openjpeg-2.5.4.tar.gz",
+    "source_member": "openjpeg-2.5.4/thirdparty/libpng/LICENSE",
+    "notice": "notices/openjpeg-2.5.4/4930273c82-LICENSE",
+    "sha256": "7317e078e2d3b5d7ba5a6159e650945153262b44b76f6700f8e9edb261c5143e"
+  },
+  {
+    "component": "openssl-python-source-deps",
+    "version": "3.5.9",
+    "archive": "native-archives/python-openssl-3.5.9.tar.gz",
+    "source_member": "cpython-source-deps-openssl-3.5.9/LICENSE.txt",
+    "notice": "notices/openssl-python-source-deps-3.5.9/eb1213e2e9-LICENSE.txt",
+    "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+  },
+  {
+    "component": "openssl-python-source-deps",
+    "version": "3.5.9",
+    "archive": "native-archives/python-openssl-3.5.9.tar.gz",
+    "source_member": "cpython-source-deps-openssl-3.5.9/external/perl/Text-Template-1.56/LICENSE",
+    "notice": "notices/openssl-python-source-deps-3.5.9/c6ec4944ea-LICENSE",
+    "sha256": "9837f05336ef3cbacb6a96e1672a0426d81ad01191f214b8d48e22ca62338181"
+  },
+  {
+    "component": "openssl-python-source-deps",
+    "version": "3.5.9",
+    "archive": "native-archives/python-openssl-3.5.9.tar.gz",
+    "source_member": "cpython-source-deps-openssl-3.5.9/util/perl/OpenSSL/copyright.pm",
+    "notice": "notices/openssl-python-source-deps-3.5.9/7f045994ca-copyright.pm",
+    "sha256": "04213b69dbebc8ba0dd8a6216af1d9422f9b63619c1cf2f1d8aa107b83bbb608"
+  },
+  {
+    "component": "Pillow-upstream",
+    "version": "12.3.0",
+    "archive": "native-archives/Pillow-12.3.0-upstream.tar.gz",
+    "source_member": "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/LICENSE",
+    "notice": "notices/Pillow-upstream-12.3.0/0500047929-LICENSE",
+    "sha256": "15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b"
+  },
+  {
+    "component": "Pillow-upstream",
+    "version": "12.3.0",
+    "archive": "native-archives/Pillow-12.3.0-upstream.tar.gz",
+    "source_member": "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/Tests/fonts/DejaVuSans/LICENSE.txt",
+    "notice": "notices/Pillow-upstream-12.3.0/608a180d6d-LICENSE.txt",
+    "sha256": "ba4aee7ef5b2ebc285e76df2497953d8a6e7480bc249f4e0a55f1199a3396622"
+  },
+  {
+    "component": "Pillow-upstream",
+    "version": "12.3.0",
+    "archive": "native-archives/Pillow-12.3.0-upstream.tar.gz",
+    "source_member": "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/Tests/fonts/LICENSE.txt",
+    "notice": "notices/Pillow-upstream-12.3.0/85ad98ca44-LICENSE.txt",
+    "sha256": "b79f6f6a2fc060b2e0a6e7a6946c446ae199bec07b92a3df1295975e25c4d96b"
+  },
+  {
+    "component": "Pillow-upstream",
+    "version": "12.3.0",
+    "archive": "native-archives/Pillow-12.3.0-upstream.tar.gz",
+    "source_member": "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/Tests/icc/LICENSE.txt",
+    "notice": "notices/Pillow-upstream-12.3.0/ed1f2ef809-LICENSE.txt",
+    "sha256": "09e62757edb34e284bc11c54e3429b438d9db37f46c9cb36bd57b1b25ae36184"
+  },
+  {
+    "component": "Pillow-upstream",
+    "version": "12.3.0",
+    "archive": "native-archives/Pillow-12.3.0-upstream.tar.gz",
+    "source_member": "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/docs/COPYING",
+    "notice": "notices/Pillow-upstream-12.3.0/569b114d3a-COPYING",
+    "sha256": "d44ce2bbf81806be0eb34ec0ecb0cb013ccd56a94057daf214fb7381adde8f0c"
+  },
+  {
+    "component": "Pillow-upstream",
+    "version": "12.3.0",
+    "archive": "native-archives/Pillow-12.3.0-upstream.tar.gz",
+    "source_member": "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/src/thirdparty/raqm/COPYING",
+    "notice": "notices/Pillow-upstream-12.3.0/a2f3766dca-COPYING",
+    "sha256": "4a574f631d5aee5223d108d3f7ec4f717343685d8a8904f42591be72c907ecba"
+  },
+  {
+    "component": "tiff",
+    "version": "4.7.1",
+    "archive": "native-archives/tiff-4.7.1.tar.gz",
+    "source_member": "tiff-4.7.1/doc/html-prebuilt/_sources/project/license.rst.txt",
+    "notice": "notices/tiff-4.7.1/7593db769d-license.rst.txt",
+    "sha256": "02e86af3b805e0f2075ebb5ac512831f6ab2a97ddeb186de076c418956418ba1"
+  },
+  {
+    "component": "tiff",
+    "version": "4.7.1",
+    "archive": "native-archives/tiff-4.7.1.tar.gz",
+    "source_member": "tiff-4.7.1/doc/html-prebuilt/project/license.html",
+    "notice": "notices/tiff-4.7.1/45acece669-license.html",
+    "sha256": "c5bc827b485b77932fd610bbedf8ec7fe9fbbc6fa6e9cf944e9c5a7446e885a6"
+  },
+  {
+    "component": "tiff",
+    "version": "4.7.1",
+    "archive": "native-archives/tiff-4.7.1.tar.gz",
+    "source_member": "tiff-4.7.1/doc/project/license.rst",
+    "notice": "notices/tiff-4.7.1/e9ed0026c4-license.rst",
+    "sha256": "02e86af3b805e0f2075ebb5ac512831f6ab2a97ddeb186de076c418956418ba1"
+  },
+  {
+    "component": "tiff",
+    "version": "4.7.1",
+    "archive": "native-archives/tiff-4.7.1.tar.gz",
+    "source_member": "tiff-4.7.1/LICENSE.md",
+    "notice": "notices/tiff-4.7.1/6c88ca53e0-LICENSE.md",
+    "sha256": "0e27c2382d7b8147972bbb746e04059a1152c8d0fda9d03ef1399d1a433c4ade"
+  },
+  {
+    "component": "xz",
+    "version": "5.8.3",
+    "archive": "native-archives/xz-5.8.3.tar.gz",
+    "source_member": "xz-5.8.3/COPYING",
+    "notice": "notices/xz-5.8.3/ffbff0cd92-COPYING",
+    "sha256": "616a3ad264ce29b8f1cb97e53037b139d406899ca8d1f799651e17bfa09830b8"
+  },
+  {
+    "component": "xz",
+    "version": "5.8.3",
+    "archive": "native-archives/xz-5.8.3.tar.gz",
+    "source_member": "xz-5.8.3/COPYING.0BSD",
+    "notice": "notices/xz-5.8.3/fcd191e3a7-COPYING.0BSD",
+    "sha256": "0b01625d853911cd0e2e088dcfb743261034a091bb379246cb25a14cc4c74bf1"
+  },
+  {
+    "component": "xz",
+    "version": "5.8.3",
+    "archive": "native-archives/xz-5.8.3.tar.gz",
+    "source_member": "xz-5.8.3/COPYING.GPLv2",
+    "notice": "notices/xz-5.8.3/47c7f403c1-COPYING.GPLv2",
+    "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+  },
+  {
+    "component": "xz",
+    "version": "5.8.3",
+    "archive": "native-archives/xz-5.8.3.tar.gz",
+    "source_member": "xz-5.8.3/COPYING.GPLv3",
+    "notice": "notices/xz-5.8.3/1b6bc24a95-COPYING.GPLv3",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+  },
+  {
+    "component": "xz",
+    "version": "5.8.3",
+    "archive": "native-archives/xz-5.8.3.tar.gz",
+    "source_member": "xz-5.8.3/COPYING.LGPLv2.1",
+    "notice": "notices/xz-5.8.3/cd6d9409cd-COPYING.LGPLv2.1",
+    "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+  },
+  {
+    "component": "xz",
+    "version": "5.8.3",
+    "archive": "native-archives/xz-5.8.3.tar.gz",
+    "source_member": "xz-5.8.3/build-aux/license-check.sh",
+    "notice": "notices/xz-5.8.3/aed68167c8-license-check.sh",
+    "sha256": "2b3fa1d23cb2ab084f3d919908159473cc0e1eed059d106e2a2857c0ec8af98a"
+  },
+  {
+    "component": "xz-python-source-deps",
+    "version": "5.2.5",
+    "archive": "native-archives/python-xz-5.2.5.tar.gz",
+    "source_member": "cpython-source-deps-xz-5.2.5/COPYING",
+    "notice": "notices/xz-python-source-deps-5.2.5/5758cd742a-COPYING",
+    "sha256": "bcb02973ef6e87ea73d331b3a80df7748407f17efdb784b61b47e0e610d3bb5c"
+  },
+  {
+    "component": "xz-python-source-deps",
+    "version": "5.2.5",
+    "archive": "native-archives/python-xz-5.2.5.tar.gz",
+    "source_member": "cpython-source-deps-xz-5.2.5/COPYING.GPLv2",
+    "notice": "notices/xz-python-source-deps-5.2.5/b329e93944-COPYING.GPLv2",
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+  },
+  {
+    "component": "xz-python-source-deps",
+    "version": "5.2.5",
+    "archive": "native-archives/python-xz-5.2.5.tar.gz",
+    "source_member": "cpython-source-deps-xz-5.2.5/COPYING.GPLv3",
+    "notice": "notices/xz-python-source-deps-5.2.5/dbb564f87a-COPYING.GPLv3",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  {
+    "component": "xz-python-source-deps",
+    "version": "5.2.5",
+    "archive": "native-archives/python-xz-5.2.5.tar.gz",
+    "source_member": "cpython-source-deps-xz-5.2.5/COPYING.LGPLv2.1",
+    "notice": "notices/xz-python-source-deps-5.2.5/75ec91b9e6-COPYING.LGPLv2.1",
+    "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+  },
+  {
+    "component": "zlib-ng",
+    "version": "2.3.3",
+    "archive": "native-archives/zlib-ng-2.3.3.tar.gz",
+    "source_member": "zlib-ng-2.3.3/LICENSE.md",
+    "notice": "notices/zlib-ng-2.3.3/17970c5894-LICENSE.md",
+    "sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee"
+  },
+  {
+    "component": "zlib-ng-python-source-deps",
+    "version": "2.2.4",
+    "archive": "native-archives/python-zlib-ng-2.2.4.tar.gz",
+    "source_member": "cpython-source-deps-zlib-ng-2.2.4/LICENSE.md",
+    "notice": "notices/zlib-ng-python-source-deps-2.2.4/b51791d9f9-LICENSE.md",
+    "sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee"
+  },
+  {
+    "component": "zstd-python-source-deps",
+    "version": "1.5.7",
+    "archive": "native-archives/python-zstd-1.5.7.tar.gz",
+    "source_member": "cpython-source-deps-zstd-1.5.7/COPYING",
+    "notice": "notices/zstd-python-source-deps-1.5.7/2c40f671c4-COPYING",
+    "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+  },
+  {
+    "component": "zstd-python-source-deps",
+    "version": "1.5.7",
+    "archive": "native-archives/python-zstd-1.5.7.tar.gz",
+    "source_member": "cpython-source-deps-zstd-1.5.7/LICENSE",
+    "notice": "notices/zstd-python-source-deps-1.5.7/10bd828c4f-LICENSE",
+    "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+  },
+  {
+    "component": "zstd-python-source-deps",
+    "version": "1.5.7",
+    "archive": "native-archives/python-zstd-1.5.7.tar.gz",
+    "source_member": "cpython-source-deps-zstd-1.5.7/build/LICENSE",
+    "notice": "notices/zstd-python-source-deps-1.5.7/6360f66366-LICENSE",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "component": "CPython",
+    "version": "3.14.8",
+    "archive": "archives/Python-3.14.8.tar.xz",
+    "source_member": "Python-3.14.8/Doc/copyright.rst",
+    "notice": "notices/CPython-3.14.8/dff2afe62a-copyright.rst",
+    "sha256": "f2c1d094466270ed41fc4dd2904d91b34d58cbb5033403b2de5cc153aba8e608"
+  },
+  {
+    "component": "CPython",
+    "version": "3.14.8",
+    "archive": "archives/Python-3.14.8.tar.xz",
+    "source_member": "Python-3.14.8/Doc/license.rst",
+    "notice": "notices/CPython-3.14.8/82d9dc4a2a-license.rst",
+    "sha256": "cd6f471c0bfdb099efefc25ddff9b3df8bf62e10428987f1f05e6f2f9e35d563"
+  },
+  {
+    "component": "CPython",
+    "version": "3.14.8",
+    "archive": "archives/Python-3.14.8.tar.xz",
+    "source_member": "Python-3.14.8/LICENSE",
+    "notice": "notices/CPython-3.14.8/2cbd6ab57c-LICENSE",
+    "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+  },
+  {
+    "component": "CPython",
+    "version": "3.14.8",
+    "archive": "archives/Python-3.14.8.tar.xz",
+    "source_member": "Python-3.14.8/Mac/BuildScript/resources/License.rtf",
+    "notice": "notices/CPython-3.14.8/72ecf77195-License.rtf",
+    "sha256": "f948498992e522edc050b1c0147e7125c33f16fce2b9fc6e02539b2fb10fdd71"
+  },
+  {
+    "component": "CPython",
+    "version": "3.14.8",
+    "archive": "archives/Python-3.14.8.tar.xz",
+    "source_member": "Python-3.14.8/Modules/expat/COPYING",
+    "notice": "notices/CPython-3.14.8/97ba1afa1c-COPYING",
+    "sha256": "31b15de82aa19a845156169a17a5488bf597e561b2c318d159ed583139b25e87"
+  },
+  {
+    "component": "CPython",
+    "version": "3.14.8",
+    "archive": "archives/Python-3.14.8.tar.xz",
+    "source_member": "Python-3.14.8/Tools/msi/bundle/bootstrap/LICENSE.txt",
+    "notice": "notices/CPython-3.14.8/36e8a2b20e-LICENSE.txt",
+    "sha256": "cb95daf98edda8e08a242e1060691b6941f0911692bf468a3f9c5e4b58c09b8f"
+  }
+]

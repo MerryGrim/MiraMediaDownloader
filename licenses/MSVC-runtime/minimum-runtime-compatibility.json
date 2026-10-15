@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "python": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+    "Qt": "6.11.2",
+    "QtWebEngine": "6.11.2",
+    "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+    "sqlite": "3.50.4",
+    "Pillow": "12.3.0",
+    "requests": "2.34.2",
+    "gallery_dl": "1.32.16"
+  },
+  "loaded_dlls": [
+    {
+      "name": "vcruntime140.dll",
+      "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066",
+      "loaded_from": "isolated application-local test directory, not System32 and not original NuGet 14.51 directory"
+    },
+    {
+      "name": "vcruntime140_1.dll",
+      "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f",
+      "loaded_from": "isolated application-local test directory, not System32 and not original NuGet 14.51 directory"
+    },
+    {
+      "name": "msvcp140.dll",
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9",
+      "loaded_from": "isolated application-local test directory, not System32 and not original NuGet 14.51 directory"
+    },
+    {
+      "name": "msvcp140_1.dll",
+      "sha256": "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d",
+      "loaded_from": "isolated application-local test directory, not System32 and not original NuGet 14.51 directory"
+    },
+    {
+      "name": "msvcp140_2.dll",
+      "sha256": "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9",
+      "loaded_from": "isolated application-local test directory, not System32 and not original NuGet 14.51 directory"
+    }
+  ],
+  "result": "PASS",
+  "method": "Unmodified official CPython 3.14.8 copied to an isolated test directory, its NuGet CRT omitted and replaced only in that test copy with Microsoft-signed 14.44.35211.0 runtime files from installed Build Tools redist. Imported actual PySide/Qt/WebEngine bindings and other pinned components; performed local codec/AES/SQLite checks. GetModuleFileName and SHA256 verified the selected CRT. No system or original runtime file was changed.",
+  "scope": "Compatibility probe; not a claim that CRT DLLs are redistributed in the final Mira binary archive, and not a clean-Windows installation test."
+}

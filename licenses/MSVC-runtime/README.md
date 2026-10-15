@@ -1,0 +1,19 @@
+# Microsoft Visual C++ runtime — external prerequisite
+
+Mira Media Downloader 1.4.4 requires the **Microsoft Visual C++ x64 Runtime 14.44.35211.0 or newer** installed as a system prerequisite. Microsoft runtime DLLs are excluded from Mira's application archive and installer payload. This directory contains notices, publisher terms, provenance and compatibility evidence; it contains no Microsoft runtime binaries.
+
+The installer directs users who need this prerequisite to Microsoft's official runtime installer through an explicit user action. Portable users install that prerequisite separately. The official download is [Microsoft Visual C++ x64 Redistributable](https://aka.ms/vc14/vc_redist.x64.exe); the publisher describes installation and supported versions in [Microsoft Learn](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist). Existing compatible installations can be used without installing another copy.
+
+Microsoft's runtime remains proprietary Microsoft software under its own terms. It is not relicensed GPL, and its proprietary source is not part of Mira's dependency source companion. Mira's published corresponding-source materials cover Mira and the applicable open-source dependencies. The distinction between using a system compiler runtime and bundling its DLLs is described in the [GNU FAQ, §WindowsRuntimeAndGPL](https://www.gnu.org/licenses/gpl-faq.en.html#WindowsRuntimeAndGPL). The release uses the separately installed system runtime, rather than claiming that app-local copies qualify automatically for the system-library exception.
+
+## Recorded inputs and verified minimum
+
+`input-runtime-files.json` records the developer-input DLL versions, hashes, original copyright notices and Microsoft Authenticode identities. It is deliberately **not** a manifest of Mira's shipped files. The official CPython NuGet 3.14.8 package supplies version 14.51.36247.0; the PySide6/Shiboken6 6.11.2 wheels supply version 14.44.35211.0, with some unused older v14 input files. All 32 recorded input/reference DLLs had valid Microsoft signatures. `input-origin-verification.json` records successful comparisons against the Qt wheel RECORD entries and the original official CPython NuGet archive.
+
+CPython 3.14.8 identifies its compiler as MSC v.1944, and the selected Qt build identifies MSVC 2022. A separate isolated probe successfully loaded Python 3.14.8, Qt/PySide/WebEngine 6.11.2 and the other pinned Python components using version **14.44.35211.0**. It verified the actually loaded CRT paths/hashes and performed local image, compression, cryptography and SQLite checks. `minimum-runtime-compatibility.json` records that evidence. The test changed no system runtime or original package installation; it is not a claim to have tested a clean Windows installation or every application operation.
+
+## Publisher documents
+
+The original Microsoft runtime terms for the 2015–2022 and 2026 v14 families are retained as DOCX files. The accompanying TXT files are paragraph-text extractions for convenient reading; the original DOCX files are authoritative. The Visual Studio Community and Build Tools documents are redistribution/toolchain references, not a claim that those developer tools are included in Mira. Microsoft's runtime-use EULA alone is not a grant to redistribute its DLLs; the separate Visual Studio terms and REDIST lists govern that activity.
+
+`provenance.json` identifies the original public Microsoft document URLs, exact retained bytes and SHA-256 values. The installed Build Tools REDIST pointer is preserved unchanged. `SHA256SUMS.txt` verifies the files in this directory. Microsoft copyright and licence notices remain intact. These records neither modify Microsoft's terms nor impose a Microsoft licence on Mira's original GPL-covered code.

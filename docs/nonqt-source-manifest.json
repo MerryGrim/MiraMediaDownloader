@@ -1,0 +1,1394 @@
+{
+  "release": "Mira Media Downloader 1.4.4",
+  "selection": "CPython official NuGet 3.14.8 runtime, exact pinned package source, Pillow 12.3.0 Windows codec sources and upstream patch/build recipes, PyInstaller bootloader/build source.",
+  "runtime_receipt": "upstream-metadata/official-python3148-receipt.json",
+  "runtime_facts": {
+    "version": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+    "sys_git": [
+      "CPython",
+      "tags/v3.14.8",
+      "8e6e75d"
+    ],
+    "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+    "sqlite": "3.50.4",
+    "zlib": "1.3.1.zlib-ng",
+    "libexpat": "expat_2.8.5",
+    "mpdecimal": "4.0.0",
+    "zstd": "1.5.7"
+  },
+  "records": [
+    {
+      "name": "altgraph",
+      "version": "0.17.5",
+      "scope": "build",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/altgraph-0.17.5.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/7e/f8/97fdf103f38fed6792a1601dbc16cc8aac56e7459a9fff08c812d8ae177a/altgraph-0.17.5.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/altgraph/0.17.5/json",
+      "metadata_file": "upstream-metadata/altgraph-0.17.5.json",
+      "publisher_sha256": "c87b395dd12fabde9c99573a9749d67da8d29ef9de0125c7f536699b4a9bc9e7",
+      "actual_sha256": "c87b395dd12fabde9c99573a9749d67da8d29ef9de0125c7f536699b4a9bc9e7",
+      "publisher_size": 48428,
+      "actual_size": 48428,
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "project_urls": {
+        "Documentation": "https://altgraph.readthedocs.io/en/latest/",
+        "Download": "http://pypi.python.org/pypi/altgraph",
+        "Homepage": "https://altgraph.readthedocs.io",
+        "Issue tracker": "https://github.com/ronaldoussoren/altgraph/issues",
+        "Repository": "https://github.com/ronaldoussoren/altgraph"
+      },
+      "archive_check": {
+        "members": 45,
+        "license_members": [
+          "altgraph-0.17.5/LICENSE",
+          "altgraph-0.17.5/doc/license.rst"
+        ],
+        "build_members": [
+          "altgraph-0.17.5/doc/Makefile",
+          "altgraph-0.17.5/setup.cfg",
+          "altgraph-0.17.5/setup.py"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "scope": "runtime",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/certifi-2026.7.22.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/certifi/2026.7.22/json",
+      "metadata_file": "upstream-metadata/certifi-2026.7.22.json",
+      "publisher_sha256": "741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55",
+      "actual_sha256": "741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55",
+      "publisher_size": 138112,
+      "actual_size": 138112,
+      "license_expression": null,
+      "license_metadata": "MPL-2.0",
+      "project_urls": {
+        "Homepage": "https://github.com/certifi/python-certifi",
+        "Source": "https://github.com/certifi/python-certifi"
+      },
+      "archive_check": {
+        "members": 23,
+        "license_members": [
+          "certifi-2026.7.22/LICENSE"
+        ],
+        "build_members": [
+          "certifi-2026.7.22/pyproject.toml",
+          "certifi-2026.7.22/setup.cfg",
+          "certifi-2026.7.22/setup.py"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "scope": "runtime",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/charset_normalizer-3.5.2.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/33/1c/f41d4e74c28ab327ff3acd36053f7ea506c55872d7a90b0fa71aa3ab0c89/charset_normalizer-3.5.2.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/charset-normalizer/3.5.2/json",
+      "metadata_file": "upstream-metadata/charset-normalizer-3.5.2.json",
+      "publisher_sha256": "39de2a259fc954455c57274dc94c79d5842774e1247a016aff30bc0efed0f4ef",
+      "actual_sha256": "39de2a259fc954455c57274dc94c79d5842774e1247a016aff30bc0efed0f4ef",
+      "publisher_size": 172659,
+      "actual_size": 172659,
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "project_urls": {
+        "Changelog": "https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md",
+        "Code": "https://github.com/jawah/charset_normalizer",
+        "Documentation": "https://charset-normalizer.readthedocs.io/",
+        "Issue tracker": "https://github.com/jawah/charset_normalizer/issues"
+      },
+      "archive_check": {
+        "members": 97,
+        "license_members": [
+          "charset_normalizer-3.5.2/LICENSE",
+          "charset_normalizer-3.5.2/data/NOTICE.md"
+        ],
+        "build_members": [
+          "charset_normalizer-3.5.2/docs/Makefile",
+          "charset_normalizer-3.5.2/pyproject.toml",
+          "charset_normalizer-3.5.2/setup.cfg",
+          "charset_normalizer-3.5.2/setup.py"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "scope": "verification-environment",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/colorama-0.4.6.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/colorama/0.4.6/json",
+      "metadata_file": "upstream-metadata/colorama-0.4.6.json",
+      "publisher_sha256": "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44",
+      "actual_sha256": "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44",
+      "publisher_size": 27697,
+      "actual_size": 27697,
+      "license_expression": null,
+      "license_metadata": "",
+      "project_urls": {
+        "Homepage": "https://github.com/tartley/colorama"
+      },
+      "archive_check": {
+        "members": 31,
+        "license_members": [
+          "colorama-0.4.6/LICENSE.txt"
+        ],
+        "build_members": [
+          "colorama-0.4.6/pyproject.toml"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "gallery-dl",
+      "version": "1.32.16",
+      "scope": "runtime",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/gallery_dl-1.32.16.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/86/65/9fb8b494ea145a7148e64ab6a577adca0413b0f9e90b422e8349cdb95a2f/gallery_dl-1.32.16.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/gallery-dl/1.32.16/json",
+      "metadata_file": "upstream-metadata/gallery-dl-1.32.16.json",
+      "publisher_sha256": "bacd7d63423ad45db98704fedafa1302343db6f250f9e9f69a9e142754ed9e37",
+      "actual_sha256": "bacd7d63423ad45db98704fedafa1302343db6f250f9e9f69a9e142754ed9e37",
+      "publisher_size": 760621,
+      "actual_size": 760621,
+      "license_expression": null,
+      "license_metadata": "GPL-2.0-only",
+      "project_urls": {
+        "Download": "https://codeberg.org/mikf/gallery-dl/releases/latest",
+        "Homepage": "https://codeberg.org/mikf/gallery-dl"
+      },
+      "archive_check": {
+        "members": 399,
+        "license_members": [
+          "gallery_dl-1.32.16/LICENSE"
+        ],
+        "build_members": [
+          "gallery_dl-1.32.16/pyproject.toml",
+          "gallery_dl-1.32.16/setup.cfg",
+          "gallery_dl-1.32.16/setup.py"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "scope": "runtime",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/idna-3.20.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/f5/08/8eea9d4b8302028f3abb2c0813953f7aec26d33b7a8960ed760e65ff29fa/idna-3.20.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/idna/3.20/json",
+      "metadata_file": "upstream-metadata/idna-3.20.json",
+      "publisher_sha256": "a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44",
+      "actual_sha256": "a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44",
+      "publisher_size": 216463,
+      "actual_size": 216463,
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": null,
+      "project_urls": {
+        "Changelog": "https://github.com/kjd/idna/blob/master/HISTORY.md",
+        "Issue tracker": "https://github.com/kjd/idna/issues",
+        "Source": "https://github.com/kjd/idna"
+      },
+      "archive_check": {
+        "members": 31,
+        "license_members": [
+          "idna-3.20/LICENSE.md"
+        ],
+        "build_members": [
+          "idna-3.20/pyproject.toml"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.1",
+      "scope": "verification-environment",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/iniconfig-2.3.1.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/01/e1/2069291243c926a2ff1cd706c7f3eeb9b62144bf60f77c9fb9ff2fb26bd3/iniconfig-2.3.1.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/iniconfig/2.3.1/json",
+      "metadata_file": "upstream-metadata/iniconfig-2.3.1.json",
+      "publisher_sha256": "67f4b9c50da0dedf52af349e7749a80a9057a5031199791b906c3bb3ae878960",
+      "actual_sha256": "67f4b9c50da0dedf52af349e7749a80a9057a5031199791b906c3bb3ae878960",
+      "publisher_size": 21209,
+      "actual_size": 21209,
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "project_urls": {
+        "Homepage": "https://github.com/pytest-dev/iniconfig"
+      },
+      "archive_check": {
+        "members": 32,
+        "license_members": [
+          "iniconfig-2.3.1/LICENSE"
+        ],
+        "build_members": [
+          "iniconfig-2.3.1/pyproject.toml",
+          "iniconfig-2.3.1/setup.cfg"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "scope": "build-and-verification-environment",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/packaging-26.3.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/packaging/26.3/json",
+      "metadata_file": "upstream-metadata/packaging-26.3.json",
+      "publisher_sha256": "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79",
+      "actual_sha256": "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79",
+      "publisher_size": 313412,
+      "actual_size": 313412,
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license_metadata": null,
+      "project_urls": {
+        "Documentation": "https://packaging.pypa.io/",
+        "Source": "https://github.com/pypa/packaging"
+      },
+      "archive_check": {
+        "members": 105,
+        "license_members": [
+          "packaging-26.3/LICENSE",
+          "packaging-26.3/LICENSE.APACHE",
+          "packaging-26.3/LICENSE.BSD",
+          "packaging-26.3/docs/licenses.rst"
+        ],
+        "build_members": [
+          "packaging-26.3/docs/Makefile",
+          "packaging-26.3/pyproject.toml"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "pefile",
+      "version": "2024.8.26",
+      "scope": "build",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/pefile-2024.8.26.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/03/4f/2750f7f6f025a1507cd3b7218691671eecfd0bbebebe8b39aa0fe1d360b8/pefile-2024.8.26.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/pefile/2024.8.26/json",
+      "metadata_file": "upstream-metadata/pefile-2024.8.26.json",
+      "publisher_sha256": "3ff6c5d8b43e8c37bb6e6dd5085658d658a7a0bdcd20b6a07b1fcfc1c4e9d632",
+      "actual_sha256": "3ff6c5d8b43e8c37bb6e6dd5085658d658a7a0bdcd20b6a07b1fcfc1c4e9d632",
+      "publisher_size": 76008,
+      "actual_size": 76008,
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "project_urls": {
+        "Download": "https://github.com/erocarrera/pefile/releases/download/v2024.8.26/pefile-2024.8.26.tar.gz",
+        "Homepage": "https://github.com/erocarrera/pefile"
+      },
+      "archive_check": {
+        "members": 23,
+        "license_members": [
+          "pefile-2024.8.26/LICENSE"
+        ],
+        "build_members": [
+          "pefile-2024.8.26/setup.cfg",
+          "pefile-2024.8.26/setup.py"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "Pillow",
+      "version": "12.3.0",
+      "scope": "runtime",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/pillow-12.3.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/1c/3d/bb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9/pillow-12.3.0.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/Pillow/12.3.0/json",
+      "metadata_file": "upstream-metadata/Pillow-12.3.0.json",
+      "publisher_sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce",
+      "actual_sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce",
+      "publisher_size": 47025035,
+      "actual_size": 47025035,
+      "license_expression": "MIT-CMU",
+      "license_metadata": null,
+      "project_urls": {
+        "Changelog": "https://github.com/python-pillow/Pillow/releases",
+        "Documentation": "https://pillow.readthedocs.io",
+        "Funding": "https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pypi-pillow&utm_medium=pypi",
+        "Homepage": "https://python-pillow.github.io",
+        "Mastodon": "https://fosstodon.org/@pillow",
+        "Release notes": "https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+        "Source": "https://github.com/python-pillow/Pillow"
+      },
+      "archive_check": {
+        "members": 1777,
+        "license_members": [
+          "pillow-12.3.0/LICENSE",
+          "pillow-12.3.0/Tests/fonts/DejaVuSans/LICENSE.txt",
+          "pillow-12.3.0/Tests/fonts/LICENSE.txt",
+          "pillow-12.3.0/Tests/icc/LICENSE.txt",
+          "pillow-12.3.0/docs/COPYING",
+          "pillow-12.3.0/src/thirdparty/raqm/COPYING"
+        ],
+        "build_members": [
+          "pillow-12.3.0/Makefile",
+          "pillow-12.3.0/docs/Makefile",
+          "pillow-12.3.0/pyproject.toml",
+          "pillow-12.3.0/setup.cfg",
+          "pillow-12.3.0/setup.py"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "pluggy",
+      "version": "1.7.0",
+      "scope": "verification-environment",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/pluggy-1.7.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/bf/db/7fc19e6f2dc92a966727031389fc2e08b558f0f25eb7403c1119ad4713cd/pluggy-1.7.0.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/pluggy/1.7.0/json",
+      "metadata_file": "upstream-metadata/pluggy-1.7.0.json",
+      "publisher_sha256": "d1eaa46ebb595891b860ab086b4d09c8588af65ebd4361b8e8f4bb8920b90ba8",
+      "actual_sha256": "d1eaa46ebb595891b860ab086b4d09c8588af65ebd4361b8e8f4bb8920b90ba8",
+      "publisher_size": 123304,
+      "actual_size": 123304,
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "project_urls": {
+        "Changelog": "https://pluggy.readthedocs.io/en/latest/changelog.html",
+        "Documentation": "https://pluggy.readthedocs.io/",
+        "Funding": "https://tidelift.com/subscription/pkg/pypi-pluggy",
+        "Homepage": "https://github.com/pytest-dev/pluggy",
+        "Issues": "https://github.com/pytest-dev/pluggy/issues",
+        "Repository": "https://github.com/pytest-dev/pluggy"
+      },
+      "archive_check": {
+        "members": 106,
+        "license_members": [
+          "pluggy-1.7.0/LICENSE"
+        ],
+        "build_members": [
+          "pluggy-1.7.0/docs/examples/eggsample/setup.py",
+          "pluggy-1.7.0/docs/examples/eggsample-spam/setup.py",
+          "pluggy-1.7.0/pyproject.toml",
+          "pluggy-1.7.0/setup.cfg"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "pycryptodomex",
+      "version": "3.24.1",
+      "scope": "runtime",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/pycryptodomex-3.24.1.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/f4/e7/50e72301e32acb73a314e663c2014e1ddefc019d5f434ff14ec89861d664/pycryptodomex-3.24.1.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/pycryptodomex/3.24.1/json",
+      "metadata_file": "upstream-metadata/pycryptodomex-3.24.1.json",
+      "publisher_sha256": "09081666ffc599976c0b8b29caf2cf82212c0f05bed233c8f8ed53e4f6e1d356",
+      "actual_sha256": "09081666ffc599976c0b8b29caf2cf82212c0f05bed233c8f8ed53e4f6e1d356",
+      "publisher_size": 4934627,
+      "actual_size": 4934627,
+      "license_expression": null,
+      "license_metadata": "BSD, Public Domain",
+      "project_urls": {
+        "Changelog": "https://www.pycryptodome.org/src/changelog",
+        "Homepage": "https://www.pycryptodome.org",
+        "Source": "https://github.com/Legrandin/pycryptodome/"
+      },
+      "archive_check": {
+        "members": 711,
+        "license_members": [
+          "pycryptodomex-3.24.1/Doc/LEGAL/copy/LICENSE.libtom",
+          "pycryptodomex-3.24.1/Doc/LEGAL/copy/LICENSE.orig",
+          "pycryptodomex-3.24.1/Doc/LEGAL/copy/LICENSE.python-2.2",
+          "pycryptodomex-3.24.1/Doc/src/license.rst",
+          "pycryptodomex-3.24.1/LICENSE.rst"
+        ],
+        "build_members": [
+          "pycryptodomex-3.24.1/Doc/Makefile",
+          "pycryptodomex-3.24.1/pyproject.toml",
+          "pycryptodomex-3.24.1/setup.cfg",
+          "pycryptodomex-3.24.1/setup.py",
+          "pycryptodomex-3.24.1/src/test/CMakeLists.txt"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "scope": "verification-environment",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/pygments-2.21.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/49/2e/ced460408999b33da6b31b0021b0f37d329e202d4169aeb164493778f25b/pygments-2.21.0.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/Pygments/2.21.0/json",
+      "metadata_file": "upstream-metadata/Pygments-2.21.0.json",
+      "publisher_sha256": "610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c",
+      "actual_sha256": "610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c",
+      "publisher_size": 5005329,
+      "actual_size": 5005329,
+      "license_expression": "BSD-2-Clause",
+      "license_metadata": null,
+      "project_urls": {
+        "Bug Tracker": "https://github.com/pygments/pygments/issues",
+        "Changelog": "https://github.com/pygments/pygments/blob/master/CHANGES",
+        "Documentation": "https://pygments.org/docs",
+        "Homepage": "https://pygments.org",
+        "Source": "https://github.com/pygments/pygments"
+      },
+      "archive_check": {
+        "members": 2797,
+        "license_members": [
+          "pygments-2.21.0/LICENSE"
+        ],
+        "build_members": [
+          "pygments-2.21.0/doc/Makefile",
+          "pygments-2.21.0/tests/examplefiles/make/Makefile",
+          "pygments-2.21.0/pyproject.toml"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "pyinstaller",
+      "version": "6.22.3",
+      "scope": "bootloader-and-build",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/pyinstaller-6.22.3.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/63/41/f90302845945abd4ed647933ff5ee7c6ac93983187be67f897b6cb613331/pyinstaller-6.22.3.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/pyinstaller/6.22.3/json",
+      "metadata_file": "upstream-metadata/pyinstaller-6.22.3.json",
+      "publisher_sha256": "05eb2f5615503e72939a7224d68b4aff572c6b0438ee4a17d0a4b481f399362d",
+      "actual_sha256": "05eb2f5615503e72939a7224d68b4aff572c6b0438ee4a17d0a4b481f399362d",
+      "publisher_size": 4437180,
+      "actual_size": 4437180,
+      "license_expression": null,
+      "license_metadata": "GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones)",
+      "project_urls": {
+        "Documentation": "https://pyinstaller.org",
+        "Homepage": "https://pyinstaller.org",
+        "Release Notes": "https://pyinstaller.org/en/stable/CHANGES.html",
+        "Source Code": "https://github.com/pyinstaller/pyinstaller"
+      },
+      "archive_check": {
+        "members": 1453,
+        "license_members": [
+          "pyinstaller-6.22.3/bootloader/waflib/LICENSE",
+          "pyinstaller-6.22.3/bootloader/zlib/LICENSE",
+          "pyinstaller-6.22.3/doc/license.rst",
+          "pyinstaller-6.22.3/COPYING.txt"
+        ],
+        "build_members": [
+          "pyinstaller-6.22.3/bootloader/waf",
+          "pyinstaller-6.22.3/bootloader/wscript",
+          "pyinstaller-6.22.3/bootloader/tests/wscript",
+          "pyinstaller-6.22.3/doc/Makefile",
+          "pyinstaller-6.22.3/tests/functional/modules/pyi_pkg_resources_provider/package/setup.py",
+          "pyinstaller-6.22.3/tests/unit/hook_order_hooks/setup.py",
+          "pyinstaller-6.22.3/tests/unit/hookutils_files/setup.py",
+          "pyinstaller-6.22.3/tests/unit/test_modulegraph/testpkg-setuptools-namespace/setup.py",
+          "pyinstaller-6.22.3/pyproject.toml"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.8",
+      "scope": "build",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/pyinstaller_hooks_contrib-2026.8.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/c9/3b/fab1a12a21bf9223af012e5dd002b7d4265683d21d9fabbd0ccb347316e4/pyinstaller_hooks_contrib-2026.8.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/pyinstaller-hooks-contrib/2026.8/json",
+      "metadata_file": "upstream-metadata/pyinstaller-hooks-contrib-2026.8.json",
+      "publisher_sha256": "4d825786ad7a9b7dbcc52d612748a34562fe273461bcfd88f4d549c594bbf8f9",
+      "actual_sha256": "4d825786ad7a9b7dbcc52d612748a34562fe273461bcfd88f4d549c594bbf8f9",
+      "publisher_size": 176955,
+      "actual_size": 176955,
+      "license_expression": null,
+      "license_metadata": null,
+      "project_urls": {
+        "Download": "https://pypi.org/project/pyinstaller-hooks-contrib",
+        "Homepage": "https://github.com/pyinstaller/pyinstaller-hooks-contrib"
+      },
+      "archive_check": {
+        "members": 746,
+        "license_members": [
+          "pyinstaller_hooks_contrib-2026.8/LICENSE"
+        ],
+        "build_members": [
+          "pyinstaller_hooks_contrib-2026.8/pyproject.toml",
+          "pyinstaller_hooks_contrib-2026.8/setup.cfg",
+          "pyinstaller_hooks_contrib-2026.8/setup.py"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "scope": "verification-environment",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/pytest-9.1.1.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/e4/47/b9efed96c114afcfa3c9d3fe98a76a1d14c74a9e266d397cf6eb64be5e01/pytest-9.1.1.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/pytest/9.1.1/json",
+      "metadata_file": "upstream-metadata/pytest-9.1.1.json",
+      "publisher_sha256": "1088fbde8f2b49d95a549a195707afa7a76a3ce9bcadc26b6d71f0ffda5fe313",
+      "actual_sha256": "1088fbde8f2b49d95a549a195707afa7a76a3ce9bcadc26b6d71f0ffda5fe313",
+      "publisher_size": 1636369,
+      "actual_size": 1636369,
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "project_urls": {
+        "Changelog": "https://docs.pytest.org/en/stable/changelog.html",
+        "Contact": "https://docs.pytest.org/en/stable/contact.html",
+        "Funding": "https://docs.pytest.org/en/stable/sponsor.html",
+        "Homepage": "https://docs.pytest.org/en/latest/",
+        "Source": "https://github.com/pytest-dev/pytest",
+        "Tracker": "https://github.com/pytest-dev/pytest/issues"
+      },
+      "archive_check": {
+        "members": 719,
+        "license_members": [
+          "pytest-9.1.1/LICENSE",
+          "pytest-9.1.1/doc/en/license.rst"
+        ],
+        "build_members": [
+          "pytest-9.1.1/doc/en/Makefile",
+          "pytest-9.1.1/pyproject.toml",
+          "pytest-9.1.1/setup.cfg"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "pywin32-ctypes",
+      "version": "0.2.3",
+      "scope": "build",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/pywin32-ctypes-0.2.3.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/85/9f/01a1a99704853cb63f253eea009390c88e7131c67e66a0a02099a8c917cb/pywin32-ctypes-0.2.3.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/pywin32-ctypes/0.2.3/json",
+      "metadata_file": "upstream-metadata/pywin32-ctypes-0.2.3.json",
+      "publisher_sha256": "d162dc04946d704503b2edc4d55f3dba5c1d539ead017afa00142c38b9885755",
+      "actual_sha256": "d162dc04946d704503b2edc4d55f3dba5c1d539ead017afa00142c38b9885755",
+      "publisher_size": 29471,
+      "actual_size": 29471,
+      "license_expression": null,
+      "license_metadata": "BSD-3-Clause",
+      "project_urls": {
+        "Homepage": "https://github.com/enthought/pywin32-ctypes"
+      },
+      "archive_check": {
+        "members": 67,
+        "license_members": [
+          "pywin32-ctypes-0.2.3/LICENSE.txt"
+        ],
+        "build_members": [
+          "pywin32-ctypes-0.2.3/docs/Makefile",
+          "pywin32-ctypes-0.2.3/setup.cfg",
+          "pywin32-ctypes-0.2.3/setup.py"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "scope": "runtime",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/requests-2.34.2.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/ac/c3/e2a2b89f2d3e2179abd6d00ebd70bff6273f37fb3e0cc209f48b39d00cbf/requests-2.34.2.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/requests/2.34.2/json",
+      "metadata_file": "upstream-metadata/requests-2.34.2.json",
+      "publisher_sha256": "f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed",
+      "actual_sha256": "f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed",
+      "publisher_size": 142856,
+      "actual_size": 142856,
+      "license_expression": null,
+      "license_metadata": "Apache-2.0",
+      "project_urls": {
+        "Documentation": "https://requests.readthedocs.io",
+        "Source": "https://github.com/psf/requests"
+      },
+      "archive_check": {
+        "members": 101,
+        "license_members": [
+          "requests-2.34.2/LICENSE",
+          "requests-2.34.2/NOTICE"
+        ],
+        "build_members": [
+          "requests-2.34.2/pyproject.toml",
+          "requests-2.34.2/setup.cfg",
+          "requests-2.34.2/setup.py",
+          "requests-2.34.2/tests/certs/expired/Makefile",
+          "requests-2.34.2/tests/certs/expired/ca/Makefile",
+          "requests-2.34.2/tests/certs/expired/server/Makefile",
+          "requests-2.34.2/tests/certs/mtls/Makefile",
+          "requests-2.34.2/tests/certs/mtls/client/Makefile",
+          "requests-2.34.2/tests/certs/mtls/client/ca/Makefile",
+          "requests-2.34.2/tests/certs/valid/ca/Makefile",
+          "requests-2.34.2/tests/certs/valid/server/Makefile"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "setuptools",
+      "version": "84.0.0",
+      "scope": "build-environment",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/setuptools-84.0.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/6d/44/f5da03a8ef95d369145c5bb53050e7877c9f3d312e128605fd9504829143/setuptools-84.0.0.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/setuptools/84.0.0/json",
+      "metadata_file": "upstream-metadata/setuptools-84.0.0.json",
+      "publisher_sha256": "f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73",
+      "actual_sha256": "f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73",
+      "publisher_size": 1168449,
+      "actual_size": 1168449,
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "project_urls": {
+        "Changelog": "https://setuptools.pypa.io/en/stable/history.html",
+        "Documentation": "https://setuptools.pypa.io/",
+        "Source": "https://github.com/pypa/setuptools"
+      },
+      "archive_check": {
+        "members": 594,
+        "license_members": [
+          "setuptools-84.0.0/LICENSE",
+          "setuptools-84.0.0/docs/userguide/license_migration.rst",
+          "setuptools-84.0.0/setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/packaging/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE",
+          "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD",
+          "setuptools-84.0.0/setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/tomli-2.4.0.dist-info/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE",
+          "setuptools-84.0.0/setuptools/_vendor/wheel-0.46.3.dist-info/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt",
+          "setuptools-84.0.0/setuptools/_vendor/zipp-3.23.0.dist-info/licenses",
+          "setuptools-84.0.0/setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE",
+          "setuptools-84.0.0/setuptools/config/NOTICE",
+          "setuptools-84.0.0/setuptools/config/_validate_pyproject/NOTICE"
+        ],
+        "build_members": [
+          "setuptools-84.0.0/pyproject.toml",
+          "setuptools-84.0.0/setup.cfg",
+          "setuptools-84.0.0/setup.py"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "scope": "runtime",
+      "kind": "upstream-source-sdist",
+      "archive": "archives/urllib3-2.8.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/e3/05/b17359e1cefb4f909b5e40b1b90a496d987258916dbbf88e842c729f510e/urllib3-2.8.0.tar.gz",
+      "metadata_url": "https://pypi.org/pypi/urllib3/2.8.0/json",
+      "metadata_file": "upstream-metadata/urllib3-2.8.0.json",
+      "publisher_sha256": "63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63",
+      "actual_sha256": "63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63",
+      "publisher_size": 458972,
+      "actual_size": 458972,
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "project_urls": {
+        "Changelog": "https://github.com/urllib3/urllib3/blob/main/CHANGES.rst",
+        "Code": "https://github.com/urllib3/urllib3",
+        "Documentation": "https://urllib3.readthedocs.io",
+        "Issue tracker": "https://github.com/urllib3/urllib3/issues",
+        "Security policy": "https://urllib3.readthedocs.io/en/latest/security.html"
+      },
+      "archive_check": {
+        "members": 129,
+        "license_members": [
+          "urllib3-2.8.0/LICENSE.txt"
+        ],
+        "build_members": [
+          "urllib3-2.8.0/docs/Makefile",
+          "urllib3-2.8.0/pyproject.toml"
+        ]
+      },
+      "modified": false,
+      "release_required": true
+    },
+    {
+      "name": "aom",
+      "version": "3.14.1",
+      "archive": "native-archives/aom-3.14.1.tar.gz",
+      "source_url": "https://aomedia.googlesource.com/aom/+archive/refs/tags/v3.14.1.tar.gz",
+      "upstream_urls": [
+        "https://aomedia.googlesource.com/aom/+archive/refs/tags/v3.14.1.tar.gz"
+      ],
+      "actual_sha256": "cac2e7001dd37b3d3d4ce7533351fe69d0c334a8a432b3f8b5d5ef8a427eb39e",
+      "actual_size": 6438105,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow/libavif Windows LOCAL encoder dependency pinned by libavif-1.4.2/cmake/Modules/LocalAom.cmake; BSD-2-Clause and patent grant.",
+      "archive_check": {
+        "member_count": 1523,
+        "notice_files": [
+          "LICENSE",
+          "third_party/fastfeat/LICENSE",
+          "third_party/googletest/src/LICENSE",
+          "third_party/highway/LICENSE-BSD3",
+          "third_party/libwebm/LICENSE.TXT",
+          "third_party/libyuv/LICENSE",
+          "third_party/vector/LICENSE",
+          "third_party/x86inc/LICENSE"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "brotli",
+      "version": "1.2.0",
+      "archive": "native-archives/brotli-1.2.0.tar.gz",
+      "source_url": "https://codeload.github.com/google/brotli/tar.gz/refs/tags/v1.2.0",
+      "upstream_urls": [
+        "https://codeload.github.com/google/brotli/tar.gz/refs/tags/v1.2.0"
+      ],
+      "actual_sha256": "816c96e8e8f193b40151dad7e8ff37b1221d019dbcb9c35cd3fadbfe6477dfec",
+      "actual_size": 646315,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows wheel dependency; MIT.",
+      "archive_check": {
+        "member_count": 184,
+        "notice_files": [
+          "brotli-1.2.0/LICENSE"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "bzip2-python-source-deps",
+      "version": "1.0.8",
+      "archive": "native-archives/python-bzip2-1.0.8.tar.gz",
+      "source_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/bzip2-1.0.8",
+      "upstream_urls": [
+        "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/bzip2-1.0.8"
+      ],
+      "actual_sha256": "ab8d1b0cc087c20d4c32c0e4fcf7d0c733a95da12cedc6d63b3f0a9af07427e2",
+      "actual_size": 818771,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Official CPython 3.14.8 PCbuild exact default bzip2-1.0.8 source tag.",
+      "archive_check": {
+        "member_count": 57,
+        "notice_files": [
+          "cpython-source-deps-bzip2-1.0.8/LICENSE"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "dav1d",
+      "version": "1.5.3",
+      "archive": "native-archives/dav1d-1.5.3.tar.xz",
+      "source_url": "https://downloads.videolan.org/pub/videolan/dav1d/1.5.3/dav1d-1.5.3.tar.xz",
+      "upstream_urls": [
+        "https://downloads.videolan.org/pub/videolan/dav1d/1.5.3/dav1d-1.5.3.tar.xz",
+        "https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.gz"
+      ],
+      "actual_sha256": "732010aa5ef461fa93355ed2c6c5fedb48ddc4b74e697eaabe8907eaeb943011",
+      "actual_size": 1022836,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow/libavif Windows LOCAL decoder dependency pinned by libavif-1.4.2/cmake/Modules/LocalDav1d.cmake; BSD-2-Clause.",
+      "archive_check": {
+        "member_count": 394,
+        "notice_files": [
+          "dav1d-1.5.3/COPYING"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "freetype",
+      "version": "2.14.3",
+      "archive": "native-archives/freetype-2.14.3.tar.gz",
+      "source_url": "https://download.savannah.gnu.org/releases/freetype/freetype-2.14.3.tar.gz",
+      "upstream_urls": [
+        "https://download.savannah.gnu.org/releases/freetype/freetype-2.14.3.tar.gz",
+        "https://raw.githubusercontent.com/python-pillow/pillow-depends/main/freetype-2.14.3.tar.gz"
+      ],
+      "actual_sha256": "e61b31ab26358b946e767ed7eb7f4bb2e507da1cfefeb7a8861ace7fd5c899a1",
+      "actual_size": 4134916,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; FTL or GPL-2.0-or-later. Choose applicable GPL route for GPLv2 combination; complete FTL/GPL notices preserved.",
+      "archive_check": {
+        "member_count": 937,
+        "notice_files": [
+          "freetype-2.14.3/docs/GPLv2.TXT",
+          "freetype-2.14.3/docs/FTL.TXT",
+          "freetype-2.14.3/LICENSE.TXT"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "harfbuzz",
+      "version": "14.2.1",
+      "archive": "native-archives/harfbuzz-14.2.1.tar.xz",
+      "source_url": "https://github.com/harfbuzz/harfbuzz/releases/download/14.2.1/harfbuzz-14.2.1.tar.xz",
+      "upstream_urls": [
+        "https://github.com/harfbuzz/harfbuzz/releases/download/14.2.1/harfbuzz-14.2.1.tar.xz",
+        "https://raw.githubusercontent.com/python-pillow/pillow-depends/main/harfbuzz-14.2.1.tar.xz"
+      ],
+      "actual_sha256": "a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e",
+      "actual_size": 19559952,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; MIT-style.",
+      "archive_check": {
+        "member_count": 3888,
+        "notice_files": [
+          "harfbuzz-14.2.1/COPYING",
+          "harfbuzz-14.2.1/src/ms-use/COPYING",
+          "harfbuzz-14.2.1/test/COPYING",
+          "harfbuzz-14.2.1/test/shape/data/aots/COPYING",
+          "harfbuzz-14.2.1/test/shape/data/text-rendering-tests/COPYING"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "lcms2",
+      "version": "2.19.1",
+      "archive": "native-archives/lcms2-2.19.1.tar.gz",
+      "source_url": "https://downloads.sourceforge.net/project/lcms/lcms/2.19.1/lcms2-2.19.1.tar.gz",
+      "upstream_urls": [
+        "https://downloads.sourceforge.net/project/lcms/lcms/2.19.1/lcms2-2.19.1.tar.gz",
+        "https://raw.githubusercontent.com/python-pillow/pillow-depends/main/lcms2-2.19.1.tar.gz"
+      ],
+      "actual_sha256": "bfc54f7bab59fbc921012014a8032e4cba4abd46db47d46b76416a8c0b2815c8",
+      "actual_size": 5728743,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; MIT.",
+      "archive_check": {
+        "member_count": 442,
+        "notice_files": [
+          "lcms2-2.19.1/LICENSE",
+          "lcms2-2.19.1/plugins/fast_float/COPYING.GPL3",
+          "lcms2-2.19.1/plugins/threaded/COPYING.GPL3",
+          "lcms2-2.19.1/utils/jpgicc/LICENSE_iccjpeg"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "libavif",
+      "version": "1.4.2",
+      "archive": "native-archives/libavif-1.4.2.tar.gz",
+      "source_url": "https://codeload.github.com/AOMediaCodec/libavif/tar.gz/refs/tags/v1.4.2",
+      "upstream_urls": [
+        "https://codeload.github.com/AOMediaCodec/libavif/tar.gz/refs/tags/v1.4.2"
+      ],
+      "actual_sha256": "2b645287340ba5a631d268b551dc2d72bd73ac33335962dd36dcdb6d8366921d",
+      "actual_size": 14665927,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; BSD-2-Clause, transitive AV1 codec source pinned by ext/*.cmd and cmake/Modules/Local*.cmake.",
+      "archive_check": {
+        "member_count": 474,
+        "notice_files": [
+          "libavif-1.4.2/LICENSE"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "libffi-python-source-deps",
+      "version": "3.4.4",
+      "archive": "native-archives/python-libffi-3.4.4.tar.gz",
+      "source_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/libffi-3.4.4",
+      "upstream_urls": [
+        "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/libffi-3.4.4"
+      ],
+      "actual_sha256": "9d802681adfea27d84cae0487a785fb9caa925bdad44c401b364c59ab2b8edda",
+      "actual_size": 1375889,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Official CPython 3.14.8 PCbuild exact default libffi-3.4.4 source tag, including Python's source dependency preparation. The official NuGet runtime and tag are recorded separately.",
+      "archive_check": {
+        "member_count": 483,
+        "notice_files": [
+          "cpython-source-deps-libffi-3.4.4/LICENSE",
+          "cpython-source-deps-libffi-3.4.4/LICENSE-BUILDTOOLS"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "libjpeg-turbo",
+      "version": "3.1.4.1",
+      "archive": "native-archives/libjpeg-turbo-3.1.4.1.tar.gz",
+      "source_url": "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-3.1.4.1.tar.gz",
+      "upstream_urls": [
+        "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-3.1.4.1.tar.gz",
+        "https://raw.githubusercontent.com/python-pillow/pillow-depends/main/libjpeg-turbo-3.1.4.1.tar.gz"
+      ],
+      "actual_sha256": "ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022",
+      "actual_size": 2528617,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; IJG/BSD/zlib notices included upstream.",
+      "archive_check": {
+        "member_count": 676,
+        "notice_files": [
+          "libjpeg-turbo-3.1.4.1/LICENSE.md",
+          "libjpeg-turbo-3.1.4.1/README.ijg",
+          "libjpeg-turbo-3.1.4.1/java/doc/legal/LICENSE",
+          "libjpeg-turbo-3.1.4.1/release/License.rtf"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "libpng",
+      "version": "1.6.58",
+      "archive": "native-archives/libpng-1.6.58.tar.gz",
+      "source_url": "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.gz",
+      "upstream_urls": [
+        "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.gz",
+        "https://raw.githubusercontent.com/python-pillow/pillow-depends/main/libpng-1.6.58.tar.gz"
+      ],
+      "actual_sha256": "8c9b05b675ca7301a458df2c2e46f26e1d41ff36b8863f8c33530bc58c2e6225",
+      "actual_size": 1582074,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; libpng license.",
+      "archive_check": {
+        "member_count": 669,
+        "notice_files": [
+          "libpng-1.6.58/LICENSE",
+          "libpng-1.6.58/ci/LICENSE_MIT.txt",
+          "libpng-1.6.58/contrib/gregbook/COPYING",
+          "libpng-1.6.58/contrib/gregbook/LICENSE",
+          "libpng-1.6.58/contrib/pngexif/LICENSE_MIT.txt",
+          "libpng-1.6.58/contrib/pngminus/LICENSE.txt"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "libwebp",
+      "version": "1.6.0",
+      "archive": "native-archives/libwebp-1.6.0.tar.gz",
+      "source_url": "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz",
+      "upstream_urls": [
+        "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz"
+      ],
+      "actual_sha256": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+      "actual_size": 4296070,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; BSD-3-Clause, includes libsharpyuv sources.",
+      "archive_check": {
+        "member_count": 392,
+        "notice_files": [
+          "libwebp-1.6.0/COPYING"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "libyuv",
+      "version": "644251f252a84bf8ce91ff0aca86a9b16b069ab8",
+      "archive": "native-archives/libyuv-644251f252a84bf8ce91ff0aca86a9b16b069ab8.tar.gz",
+      "source_url": "https://chromium.googlesource.com/libyuv/libyuv/+archive/644251f252a84bf8ce91ff0aca86a9b16b069ab8.tar.gz",
+      "upstream_urls": [
+        "https://chromium.googlesource.com/libyuv/libyuv/+archive/644251f252a84bf8ce91ff0aca86a9b16b069ab8.tar.gz"
+      ],
+      "actual_sha256": "758d92e4bdb1008ae79a81a75ced66723ca43580e8760791c29be3389c5a0410",
+      "actual_size": 598349,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow/libavif Windows LOCAL dependency exact commit pinned by libavif-1.4.2/cmake/Modules/LocalLibyuv.cmake; BSD-3-Clause.",
+      "archive_check": {
+        "member_count": 204,
+        "notice_files": [
+          "LICENSE"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "mpdecimal-python-source-deps",
+      "version": "4.0.0",
+      "archive": "native-archives/python-mpdecimal-4.0.0.tar.gz",
+      "source_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/mpdecimal-4.0.0",
+      "upstream_urls": [
+        "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/mpdecimal-4.0.0"
+      ],
+      "actual_sha256": "338fac3fb8cdd60f406b6326431338756f58a8af94229ffd9bf1e7c2b1ad71ca",
+      "actual_size": 319629,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Official CPython 3.14.8 PCbuild exact default source dependency; BSD-2-Clause.",
+      "archive_check": {
+        "member_count": 159,
+        "notice_files": []
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "openjpeg",
+      "version": "2.5.4",
+      "archive": "native-archives/openjpeg-2.5.4.tar.gz",
+      "source_url": "https://codeload.github.com/uclouvain/openjpeg/tar.gz/refs/tags/v2.5.4",
+      "upstream_urls": [
+        "https://codeload.github.com/uclouvain/openjpeg/tar.gz/refs/tags/v2.5.4"
+      ],
+      "actual_sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a",
+      "actual_size": 2157028,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; BSD-2-Clause.",
+      "archive_check": {
+        "member_count": 519,
+        "notice_files": [
+          "openjpeg-2.5.4/LICENSE",
+          "openjpeg-2.5.4/src/bin/wx/OPJViewer/source/license.txt",
+          "openjpeg-2.5.4/thirdparty/astyle/LICENSE.md",
+          "openjpeg-2.5.4/thirdparty/liblcms2/COPYING",
+          "openjpeg-2.5.4/thirdparty/libpng/LICENSE"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "openssl-python-source-deps",
+      "version": "3.5.9",
+      "archive": "native-archives/python-openssl-3.5.9.tar.gz",
+      "source_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/openssl-3.5.9",
+      "upstream_urls": [
+        "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/openssl-3.5.9"
+      ],
+      "actual_sha256": "d6cf0d9a651f25fe506f6b3dc133a80b9b79a0bc565f570dcf8fdbd597551485",
+      "actual_size": 53469014,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Official CPython 3.14.8 PCbuild exact default source dependency; Apache-2.0.",
+      "archive_check": {
+        "member_count": 6070,
+        "notice_files": [
+          "cpython-source-deps-openssl-3.5.9/LICENSE.txt",
+          "cpython-source-deps-openssl-3.5.9/external/perl/Text-Template-1.56/LICENSE"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "Pillow-upstream",
+      "version": "12.3.0",
+      "archive": "native-archives/Pillow-12.3.0-upstream.tar.gz",
+      "source_url": "https://codeload.github.com/python-pillow/Pillow/tar.gz/bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d",
+      "upstream_urls": [
+        "https://codeload.github.com/python-pillow/Pillow/tar.gz/bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d"
+      ],
+      "actual_sha256": "3088957d53e64d5bc802dc043d64de2d76796c3f3b973113bdbb4c9ecd1b30a1",
+      "actual_size": 47129949,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Exact upstream Git commit bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d; includes .github/dependencies.json and wheel build patches omitted from sdist.",
+      "archive_check": {
+        "member_count": 1862,
+        "notice_files": [
+          "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/LICENSE",
+          "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/Tests/fonts/DejaVuSans/LICENSE.txt",
+          "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/Tests/fonts/LICENSE.txt",
+          "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/Tests/icc/LICENSE.txt",
+          "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/docs/COPYING",
+          "Pillow-bb1d8e8ab8d29048624d96e3ee53cecf7c13d13d/src/thirdparty/raqm/COPYING"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "sqlite-python-source-deps",
+      "version": "3.50.4.0",
+      "archive": "native-archives/python-sqlite-3.50.4.0.tar.gz",
+      "source_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/sqlite-3.50.4.0",
+      "upstream_urls": [
+        "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/sqlite-3.50.4.0"
+      ],
+      "actual_sha256": "fb5ab81f27612b0a7b4861ba655906c76dc85ee969e7a4905d2075aff931e8d0",
+      "actual_size": 2845090,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Official CPython 3.14.8 PCbuild exact default source dependency; public domain.",
+      "archive_check": {
+        "member_count": 6,
+        "notice_files": []
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "tiff",
+      "version": "4.7.1",
+      "archive": "native-archives/tiff-4.7.1.tar.gz",
+      "source_url": "https://download.osgeo.org/libtiff/tiff-4.7.1.tar.gz",
+      "upstream_urls": [
+        "https://download.osgeo.org/libtiff/tiff-4.7.1.tar.gz"
+      ],
+      "actual_sha256": "f698d94f3103da8ca7438d84e0344e453fe0ba3b7486e04c5bf7a9a3fabe9b69",
+      "actual_size": 4000609,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; libtiff permissive license.",
+      "archive_check": {
+        "member_count": 1095,
+        "notice_files": [
+          "tiff-4.7.1/doc/html-prebuilt/_sources/project/license.rst.txt",
+          "tiff-4.7.1/doc/html-prebuilt/project/license.html",
+          "tiff-4.7.1/doc/project/license.rst",
+          "tiff-4.7.1/LICENSE.md"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "xz",
+      "version": "5.8.3",
+      "archive": "native-archives/xz-5.8.3.tar.gz",
+      "source_url": "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz",
+      "upstream_urls": [
+        "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz",
+        "https://raw.githubusercontent.com/python-pillow/pillow-depends/main/xz-5.8.3.tar.gz"
+      ],
+      "actual_sha256": "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0",
+      "actual_size": 2771455,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows liblzma dependency; applicable individual file licenses included upstream.",
+      "archive_check": {
+        "member_count": 698,
+        "notice_files": [
+          "xz-5.8.3/COPYING",
+          "xz-5.8.3/COPYING.0BSD",
+          "xz-5.8.3/COPYING.GPLv2",
+          "xz-5.8.3/COPYING.GPLv3",
+          "xz-5.8.3/COPYING.LGPLv2.1",
+          "xz-5.8.3/build-aux/license-check.sh"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "xz-python-source-deps",
+      "version": "5.2.5",
+      "archive": "native-archives/python-xz-5.2.5.tar.gz",
+      "source_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/xz-5.2.5",
+      "upstream_urls": [
+        "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/xz-5.2.5"
+      ],
+      "actual_sha256": "a15c168e39e87d750c3dc766edc7f19bdda57dacf01e509678467eace91ad282",
+      "actual_size": 1744796,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Official CPython 3.14.8 PCbuild exact default xz-5.2.5 source tag; liblzma built into _lzma.pyd.",
+      "archive_check": {
+        "member_count": 521,
+        "notice_files": [
+          "cpython-source-deps-xz-5.2.5/COPYING",
+          "cpython-source-deps-xz-5.2.5/COPYING.GPLv2",
+          "cpython-source-deps-xz-5.2.5/COPYING.GPLv3",
+          "cpython-source-deps-xz-5.2.5/COPYING.LGPLv2.1"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "zlib-ng",
+      "version": "2.3.3",
+      "archive": "native-archives/zlib-ng-2.3.3.tar.gz",
+      "source_url": "https://codeload.github.com/zlib-ng/zlib-ng/tar.gz/refs/tags/2.3.3",
+      "upstream_urls": [
+        "https://codeload.github.com/zlib-ng/zlib-ng/tar.gz/refs/tags/2.3.3"
+      ],
+      "actual_sha256": "f9c65aa9c852eb8255b636fd9f07ce1c406f061ec19a2e7d508b318ca0c907d1",
+      "actual_size": 2447397,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Pillow Windows dependency; zlib-style licenses.",
+      "archive_check": {
+        "member_count": 388,
+        "notice_files": [
+          "zlib-ng-2.3.3/LICENSE.md"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "zlib-ng-python-source-deps",
+      "version": "2.2.4",
+      "archive": "native-archives/python-zlib-ng-2.2.4.tar.gz",
+      "source_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/zlib-ng-2.2.4",
+      "upstream_urls": [
+        "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/zlib-ng-2.2.4"
+      ],
+      "actual_sha256": "00bbd88709bc416cb96160ab61d3e1c8f76e106799af7328d0fe434dc7dd5004",
+      "actual_size": 2415819,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Official CPython 3.14.8 PCbuild exact default source dependency; zlib-style license.",
+      "archive_check": {
+        "member_count": 362,
+        "notice_files": [
+          "cpython-source-deps-zlib-ng-2.2.4/LICENSE.md"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "zstd-python-source-deps",
+      "version": "1.5.7",
+      "archive": "native-archives/python-zstd-1.5.7.tar.gz",
+      "source_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/zstd-1.5.7",
+      "upstream_urls": [
+        "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/zstd-1.5.7"
+      ],
+      "actual_sha256": "f24b52470d12f466e9fa4fcc94e6c530625ada51d7b36de7fdc6ed7e6f499c8e",
+      "actual_size": 2440298,
+      "publisher_sha256": null,
+      "hash_verification": "Downloaded over HTTPS from the official upstream distribution or Pillow project's source cache; no independently published SHA256 has yet been recorded.",
+      "notes": "Official CPython 3.14.8 PCbuild exact default source dependency; BSD-3-Clause or GPL-2.0, choose BSD terms.",
+      "archive_check": {
+        "member_count": 729,
+        "notice_files": [
+          "cpython-source-deps-zstd-1.5.7/COPYING",
+          "cpython-source-deps-zstd-1.5.7/LICENSE",
+          "cpython-source-deps-zstd-1.5.7/build/LICENSE"
+        ]
+      },
+      "modified": false,
+      "failed_attempts": [],
+      "release_required": true
+    },
+    {
+      "name": "CPython",
+      "version": "3.14.8",
+      "source_url": "https://www.python.org/ftp/python/3.14.8/Python-3.14.8.tar.xz",
+      "release_page": "https://www.python.org/downloads/release/python-3148/",
+      "publisher_sha256": "c2215904f02b175596dc49351585104f4bc20341e1c47378b26a2c274360ce73",
+      "actual_sha256": "c2215904f02b175596dc49351585104f4bc20341e1c47378b26a2c274360ce73",
+      "actual_size": 24130644,
+      "archive": "archives/Python-3.14.8.tar.xz",
+      "archive_member_count": 5565,
+      "published_git_tag": "v3.14.8",
+      "runtime_and_nuget_git_revision": "8e6e75d",
+      "build_files": [
+        "PCbuild/build.bat",
+        "PCbuild/python.props",
+        "PCbuild/get_externals.bat",
+        "PCbuild/prepare_libffi.bat",
+        "Tools/msi/README.txt"
+      ],
+      "scope": "runtime-interpreter",
+      "release_required": true
+    }
+  ],
+  "release_source_archives": 45,
+  "release_source_bytes": 276181448,
+  "native_notices": 141,
+  "errors": []
+}

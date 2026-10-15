@@ -1,0 +1,127 @@
+{
+  "release": "Mira Media Downloader 1.4.4",
+  "review_date": "2026-10-15",
+  "distribution_role": "external system prerequisite; Microsoft runtime DLLs are excluded from Mira binary packages",
+  "minimum_x64_runtime_version": "14.44.35211.0",
+  "official_runtime_download": "https://aka.ms/vc14/vc_redist.x64.exe",
+  "copyright": "Copyright Microsoft Corporation. All rights reserved.",
+  "input_inventory": "input-runtime-files.json",
+  "input_inventory_scope": "Available signed input DLLs in official Python/PySide/Shiboken distributions and installed Build Tools redist reference. This is not the list of files shipped in Mira.",
+  "excluded_binary_families": [
+    "vcruntime*.dll",
+    "msvcp*.dll",
+    "concrt*.dll",
+    "vccorlib*.dll",
+    "vcamp*.dll",
+    "vcomp*.dll"
+  ],
+  "input_origin_verification": "input-origin-verification.json",
+  "minimum_runtime_probe": "minimum-runtime-compatibility.json",
+  "source_scope": "No Microsoft proprietary runtime source is claimed or supplied. GPL source delivery covers Mira and its applicable open-source dependencies; system prerequisite installation is separate.",
+  "documents": [
+    {
+      "file": "Microsoft-VC-Runtime-2015-2022.docx",
+      "kind": "unmodified-original-upstream-document",
+      "source_url": "https://visualstudio.microsoft.com/wp-content/uploads/2021/09/Visual-C-Runtime-2015-2022-License-1.docx",
+      "source_page": "https://visualstudio.microsoft.com/license-terms/vs2022-cruntime/",
+      "sha256": "f1e3d56ceb2ad68aae0711b910375009e651ac5530fa0760f0dea6e81e54fae1",
+      "bytes": 39644
+    },
+    {
+      "file": "Microsoft-VC-Runtime-2015-2022.txt",
+      "kind": "plain-text-paragraph-extraction-for-accessibility",
+      "derived_from": "Microsoft-VC-Runtime-2015-2022.docx",
+      "method": "word/document.xml w:p paragraphs; w:t text preserved in order; paragraphs separated by LF; original DOCX is authoritative",
+      "sha256": "2dd434a15fb5f9d28c33211a5af471eb719acba5db65e5103e0db95e7869a2fb",
+      "bytes": 6624
+    },
+    {
+      "file": "Microsoft-VC-v14-Runtime-2026.docx",
+      "kind": "unmodified-original-upstream-document",
+      "source_url": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual-C-V14-License-Redistributable_and_Runtime_ENU.docx",
+      "source_page": "https://visualstudio.microsoft.com/license-terms/vs2026-ga-visualcpp-v14-redist-runtime/",
+      "sha256": "08651651a7602fc7c0e2763de0fde1ff9f868df2780597cd1775ee9d6441c783",
+      "bytes": 39553
+    },
+    {
+      "file": "Microsoft-VC-v14-Runtime-2026.txt",
+      "kind": "plain-text-paragraph-extraction-for-accessibility",
+      "derived_from": "Microsoft-VC-v14-Runtime-2026.docx",
+      "method": "word/document.xml w:p paragraphs; w:t text preserved in order; paragraphs separated by LF; original DOCX is authoritative",
+      "sha256": "c15f0776c632b97bc3b01dbc3090ae347bb406235ae7132601bbaba91624e4fc",
+      "bytes": 11945
+    },
+    {
+      "file": "VisualStudio-2022-Community-Redistribution-Reference.docx",
+      "kind": "unmodified-original-upstream-document",
+      "source_url": "https://visualstudio.microsoft.com/wp-content/uploads/2021/11/Visual-Studio-2022-Community-License-EN.docx",
+      "source_page": "https://visualstudio.microsoft.com/license-terms/vs2022-ga-community/",
+      "sha256": "41a207b10c8ab91d0d2f10a854715f73dca54509581692d2fe179aa3ffcb8540",
+      "bytes": 62859
+    },
+    {
+      "file": "VisualStudio-2022-Community-Redistribution-Reference.txt",
+      "kind": "plain-text-paragraph-extraction-for-accessibility",
+      "derived_from": "VisualStudio-2022-Community-Redistribution-Reference.docx",
+      "method": "word/document.xml w:p paragraphs; w:t text preserved in order; paragraphs separated by LF; original DOCX is authoritative",
+      "sha256": "a38d10afc3ef8fb2e64af972a9c64d998ef964de8101b9f7a59703f72fa3a5ab",
+      "bytes": 19043
+    },
+    {
+      "file": "VisualStudio-2026-Community-Redistribution-Reference.docx",
+      "kind": "unmodified-original-upstream-document",
+      "source_url": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual_Studio_2026-License-Community_ENU.docx",
+      "source_page": "https://visualstudio.microsoft.com/license-terms/vs2026-ga-community/",
+      "sha256": "02ac07637f4a513a807cd3721c7620433fc483bc049d25784b0c10c54b05e1fb",
+      "bytes": 69066
+    },
+    {
+      "file": "VisualStudio-2026-Community-Redistribution-Reference.txt",
+      "kind": "plain-text-paragraph-extraction-for-accessibility",
+      "derived_from": "VisualStudio-2026-Community-Redistribution-Reference.docx",
+      "method": "word/document.xml w:p paragraphs; w:t text preserved in order; paragraphs separated by LF; original DOCX is authoritative",
+      "sha256": "2c938dfd8101573c91141c80275158a81347a0144155073f35f9c300ef347a10",
+      "bytes": 27314
+    },
+    {
+      "file": "VisualStudio-2022-BuildTools-Reference.docx",
+      "kind": "unmodified-original-upstream-document",
+      "source_url": "https://visualstudio.microsoft.com/wp-content/uploads/2024/03/Visual-Studio-2022-Diagnostic-Build-Tools-Agent-License_Update-March-2024_EN.docx",
+      "source_page": "https://visualstudio.microsoft.com/license-terms/vs2022-ga-diagnosticbuildtools/",
+      "sha256": "2f66b86a00e8d9833789897ce23d05a4a2dbea370cf39c8c1098dbc17d0e7bdc",
+      "bytes": 34395
+    },
+    {
+      "file": "VisualStudio-2022-BuildTools-Reference.txt",
+      "kind": "plain-text-paragraph-extraction-for-accessibility",
+      "derived_from": "VisualStudio-2022-BuildTools-Reference.docx",
+      "method": "word/document.xml w:p paragraphs; w:t text preserved in order; paragraphs separated by LF; original DOCX is authoritative",
+      "sha256": "c577c6137db9df991585f4988c019761b8dd59578870925b401327ffa3a285aa",
+      "bytes": 11288
+    },
+    {
+      "file": "VisualStudio-2022-REDIST.html",
+      "kind": "unmodified-original-upstream-document",
+      "source_url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution",
+      "source_page": null,
+      "sha256": "21cd00069f9e608b412c98ea531702105e1d1b560101a676d35b4a074cd41c91",
+      "bytes": 62996
+    },
+    {
+      "file": "VisualStudio-2026-REDIST.html",
+      "kind": "unmodified-original-upstream-document",
+      "source_url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution",
+      "source_page": null,
+      "sha256": "9a1b5d5aca87f70ab91db4176429b5ceade8d9f1227f95ebcba8bc2a9f30ac35",
+      "bytes": 48845
+    },
+    {
+      "file": "Installed-BuildTools-Redist-pointer.txt",
+      "kind": "unmodified-installed-publisher-pointer",
+      "source": "Visual Studio Build Tools 2022 installed Licenses/1049/Redist.txt",
+      "sha256": "da53b097e02b08e0fc69706102a60bc384fe756426ae4dc4a855e96f95cb2b9c",
+      "bytes": 187
+    }
+  ],
+  "third_party_terms_status": "Retained publisher terms and REDIST references; no Mira relicensing of Microsoft code and no assertion that the runtime use EULA itself grants redistribution rights."
+}
