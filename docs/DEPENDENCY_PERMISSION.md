@@ -22,6 +22,13 @@ The additional permission in `COPYRIGHT` applies only to original Mira contribut
 
 ## Distribution records
 
+Mira's original installer script also has explicit permission to combine with
+Inno Setup and RemObjects Pascal Script, as named in `COPYRIGHT`. This covers
+only Mira's installer code; gallery-dl is a separate installed payload and is
+not linked into the installer interpreter. Original installer-engine notices
+and the required Pascal Script acknowledgement are retained. The release's
+`InstallerSources.zip` provides the exact installer-engine source materials.
+
 The small original Win32 launcher uses the compiler's static runtime so it can
 display the prerequisite message before Qt/Python is available. That original
 launcher code is covered by Mira's explicit dependency permission, including the

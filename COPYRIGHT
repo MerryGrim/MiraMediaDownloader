@@ -18,14 +18,14 @@ their own copyright notices and licenses. Project artwork provenance and
 reuse information are documented in assets/ARTWORK.md. No rights to website
 content, downloaded images or platform trademarks are granted here.
 
-Additional permission for required runtime libraries
---------------------------------------------------
+Additional permission for runtime and installer libraries
+--------------------------------------------------------
 
 In addition to the permissions of the GNU General Public License, version 2
 or any later version, the copyright holders of the original Mira Media
 Downloader code give permission to link or combine that code with Requests,
 PySide6, Shiboken6, Qt, Qt WebEngine, Chromium, Microsoft Visual C++ runtime,
-and their required runtime
+Inno Setup, RemObjects Pascal Script, and their required runtime
 dependencies identified in the release's third-party component manifest,
 under those components' respective licenses, and to copy and distribute the
 resulting combination subject to the GNU GPL for the original Mira code and

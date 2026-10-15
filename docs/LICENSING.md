@@ -43,7 +43,7 @@ references are in [DEPENDENCY_PERMISSION.md](DEPENDENCY_PERMISSION.md).
 ## Download the corresponding source
 
 At [release v1.4.4](https://github.com/MerryGrim/MiraMediaDownloader/releases/tag/v1.4.4),
-download **both**:
+download **both application source archives**:
 
 1. `MiraMediaDownloader-1.4.4-Source.zip`: original Mira source, assets, tests,
    dependency pins, native launcher, packaging and installer scripts.
@@ -52,6 +52,15 @@ download **both**:
    native dependencies, gallery-dl, Requests and the other runtime/build sources.
    Original archive layouts, notices, source URLs, build information and
    checksum manifests are preserved. Its README explains extraction/building.
+
+For the installer, additionally download
+`MiraMediaDownloader-1.4.4-InstallerSources.zip`. It supplies the exact Inno Setup
+7.1.0 engine sources and embedded Pascal Script/codec sources, original licences
+and provenance. Mira's original installer script is in the application archive.
+The original-code dependency permission in `COPYRIGHT` explicitly covers Inno
+Setup and RemObjects Pascal Script; the installer engine is separate from the
+installed application's gallery-dl runtime. Its required attribution is preserved
+in `licenses/InnoSetup/` and `THIRD_PARTY_NOTICES.md`.
 
 `SHA256SUMS-1.4.4.txt` at the same release verifies the published assets. Sources
 are available at the same public location as the executable packages without

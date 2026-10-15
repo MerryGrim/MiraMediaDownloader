@@ -1,0 +1,74 @@
+{
+  "component": "Inno Setup",
+  "version": "7.1.0",
+  "tag": "is-7_1_0",
+  "commit": "7d634620f1d1caca6c76e8398da7133153db9e7b",
+  "archive_url": "https://codeload.github.com/jrsoftware/issrc/tar.gz/refs/tags/is-7_1_0",
+  "resolved_url": "https://codeload.github.com/jrsoftware/issrc/tar.gz/refs/tags/is-7_1_0",
+  "archive": "archives/innosetup-7.1.0-is-7_1_0.tar.gz",
+  "archive_bytes": 7640682,
+  "archive_sha256": "2b7e8a9b42d30babdaa653e86ea7214d5d689691cb844db5a5bb8b8c791950bc",
+  "archive_source_file_count": 705,
+  "archive_unpacked_file_bytes": 21776857,
+  "lzma_sdk_4_43": {
+    "archive": "archives/lzma443.tar.bz2",
+    "url": "https://downloads.sourceforge.net/project/sevenzip/LZMA%20SDK/4.43/lzma443.tar.bz2",
+    "resolved_url": "https://master.dl.sourceforge.net/project/sevenzip/LZMA%20SDK/4.43/lzma443.tar.bz2?viasf=1&fid=7fe07bb4bf139d39&e=1792149076&st=z5skEu20oa6v_VH8hW2ZXQ",
+    "bytes": 178493,
+    "sha256": "ba85f63243f1f530882cadae401e6f42f624ebb07829e467ea6177e303fa64b2",
+    "scope": "Original small LZMA1 decoder SDK and its original LGPL2.1/CPL1.0 terms plus static-link exception. The Inno source archive includes the actual wrapper and decoder source used by the installer."
+  },
+  "collected_at_utc": "2026-10-15T11:11:18.394660+00:00",
+  "selected_original_notices": [
+    {
+      "file": "InnoSetup-LICENSE.txt",
+      "archive_path": "license.txt",
+      "sha256": "2e5346868c2a18434489824e11d65c3031620f792fefc415d05f19cd441abf5c",
+      "bytes": 1521
+    },
+    {
+      "file": "RemObjects-PascalScript-LICENSE.md",
+      "archive_path": "Components/UniPs/LICENSE.md",
+      "sha256": "a08799bb2385a3af99a9bbb7c746d0ad9ac7dd07be0fb1473f2f4d1dc3e11bd1",
+      "bytes": 1098
+    },
+    {
+      "file": "LZMA1Small-LzmaDecode.h",
+      "archive_path": "Projects/Src/Compression.LZMA1SmallDecompressor/LzmaDecode/LzmaDecode.h",
+      "sha256": "920b2462201edbe05c0c79db6729f6965e4f135455771488d29942aff27d73eb",
+      "bytes": 2807
+    },
+    {
+      "file": "LGPL-2.1.txt",
+      "sdk_archive_path": "LGPL.txt",
+      "sha256": "2c3c3ef532828bcd42bb3127349625a25291ff5ae7e6f8d42e0fe9b5be836a99",
+      "bytes": 26948
+    },
+    {
+      "file": "CPL-1.0.html",
+      "sdk_archive_path": "CPL.html",
+      "sha256": "21771e0fed167c79187666ac3f8c8a44ca4b58e6ca30bf628cd6b6fad6e76737",
+      "bytes": 15193
+    },
+    {
+      "file": "LZMA-SDK-4.43-LICENSE.txt",
+      "sdk_archive_path": "lzma.txt",
+      "sha256": "ed7e17296f7d8703064a1c3a17dbb6032fe7714d5852f96285b051a2873a1c7f",
+      "bytes": 21760
+    }
+  ],
+  "supporting_sources_verified_in_archive": {
+    "Pascal Script runtime and source": "Components/UniPs/Source/uPSRuntime.pas",
+    "LZMA1 small decoder source": "Projects/Src/Compression.LZMA1SmallDecompressor/LzmaDecode/LzmaDecodeSize.c",
+    "LZMA2 decoder source": "Components/Lzma2/Lzma2Dec.c",
+    "7z decoder source": "Components/Lzma2/7zDec.c",
+    "LZMA source licence/readme": "Components/Lzma2/7zVersion.h",
+    "Inno build instructions": "README.md",
+    "Inno build script": "build.bat",
+    "Inno precompiled source build script": "build-precomp.bat"
+  },
+  "publisher_checksum": "The upstream Git tag/ref/commit metadata identifies the source. No independent publisher SHA256 was advertised; the recorded SHA256 is locally computed, not claimed to be a publisher checksum.",
+  "installed_compiler_path": "D:/AI/Tools/InnoSetup7/ISCC.exe",
+  "installed_compiler_version": "7.1.0",
+  "licence_scope": "Inno Setup and its embedded third-party components retain their original licences; Mira's GPL does not relicense this separate installer runtime or its proprietary compiler/runtime tools."
+}

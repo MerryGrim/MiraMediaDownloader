@@ -9,7 +9,7 @@ Complete application and dependency source is provided alongside the Windows
 packages, at the same public download location:
 https://github.com/MerryGrim/MiraMediaDownloader/releases/tag/v1.4.4
 
-Download BOTH source archives:
+For the application, download BOTH source archives:
   MiraMediaDownloader-1.4.4-Source.zip
   MiraMediaDownloader-1.4.4-DependencySources.zip
 
@@ -18,6 +18,11 @@ contains the upstream source archives, their original notices/build scripts,
 provenance and checksum manifests for the supplied runtime components,
 including Qt/PySide/WebEngine/Chromium, gallery-dl and Python dependencies.
 SHA256SUMS-1.4.4.txt at the same release checks all published archives.
+
+For the installer engine and embedded Pascal Script/codec components, also
+download MiraMediaDownloader-1.4.4-InstallerSources.zip at the same release.
+Its exact-version upstream sources, original notices, provenance and build
+information complement Mira's installer script in the application source.
 
 README.md, scripts/build.ps1, scripts/build-launcher.ps1 and
 scripts/build-installer.ps1 describe/build the Windows application and installer.
