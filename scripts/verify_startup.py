@@ -11,6 +11,7 @@ import time
 from PIL import Image
 
 from windows_capture import api, windows, capture
+from window_corners import client_geometry, composed_corner_proof
 
 
 def artwork_pixel_proof(frame):
@@ -68,7 +69,7 @@ def main():
                                APPDATA=str(directory/'isolated-roaming'),
                                LOCALAPPDATA=str(directory/'isolated-local'),
                                MIRA_SESSION_DIR=str(directory/'isolated-empty-vault'))
-            started=time.monotonic(); screenshot=None; visible_ms=None; proof=None; caption_bits=None
+            started=time.monotonic(); screenshot=None; visible_ms=None; proof=None; caption_bits=None; corner_proof=None
             with (directory/'stdout.log').open('wb') as stdout,(directory/'stderr.log').open('wb') as stderr:
                 process=subprocess.Popen([str(executable),'--startup-probe',str(directory/'gui')],
                     env=environment,stdout=stdout,stderr=stderr,creationflags=subprocess.CREATE_NO_WINDOW)
@@ -79,7 +80,8 @@ def main():
                             owned=windows(process.pid,class_name='MiraNativeStartup')
                             if owned:
                                 caption_bits=user.GetWindowLongPtrW(owned[0][0],-16) & 0x00c00000
-                                assert caption_bits==0, 'Loader still has a native caption'
+                                geometry=client_geometry(owned[0][0])
+                                assert geometry['client']==geometry['window'], 'Loader has a caption/frame inset'
                                 if visible_ms is None:
                                     visible_ms=round((time.monotonic()-started)*1000)
                                 try:
@@ -92,6 +94,8 @@ def main():
                                     with Image.open(target) as frame:
                                         proof=artwork_pixel_proof(frame)
                                         if proof['passed']:
+                                            corner_proof=composed_corner_proof(owned[0][0],directory/'startup-corners.png',rounded=True)
+                                            assert corner_proof['passed'], corner_proof
                                             screenshot=target
                         time.sleep(0.01)
                     assert process.poll() is not None, 'Startup process did not finish'
@@ -111,6 +115,7 @@ def main():
             result['languages'][language]={'theme':theme,'timing':trace,'visible_after_ms':visible_ms,
                                           'no_standard_caption':True,
                                           'native_caption_bits':caption_bits,'artwork_pixel_proof':proof,
+                                          'corner_pixel_proof':corner_proof,
                                           'screenshot':str(screenshot),'actual_parent_exit_code':0}
         result['themes_with_verified_art']=sorted({item['theme'] for item in result['languages'].values()
                                                  if item['artwork_pixel_proof']['passed']})

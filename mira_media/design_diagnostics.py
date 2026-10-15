@@ -11,10 +11,11 @@ from pathlib import Path
 
 
 def design_probe(output: str) -> int:
-    from PySide6.QtCore import QDate, QPoint, Qt, QTimer
+    from PySide6.QtCore import QAbstractProxyModel, QDate, QElapsedTimer, QEventLoop, QPoint, Qt, QTimer
     from PySide6.QtGui import QColor, QLinearGradient, QPainter, QPalette, QPolygon
     from PySide6.QtGui import QPixmap
-    from PySide6.QtWidgets import QAbstractSpinBox, QApplication, QDialog, QLabel, QToolButton
+    from PySide6.QtWidgets import (QAbstractItemView, QAbstractSpinBox, QApplication, QDialog,
+                                   QFileSystemModel, QLabel, QToolButton)
     from .date_filter import DateFilterDialog
     from .localization import calendar_locale_name, get_language, tr
     from .themes import colors as theme_colors, get_theme
@@ -62,6 +63,82 @@ def design_probe(output: str) -> int:
         if not condition:
             raise AssertionError(name)
 
+    def wait_for_picker_entry(dialog, expected: Path, name: str) -> None:
+        """Wait for an actual fixture row, rather than guessing a render delay."""
+        picker = dialog.file_picker
+        model = picker.findChild(QFileSystemModel)
+        check(name + '_filesystem_model_present', model is not None)
+        views = [view for view in picker.findChildren(QAbstractItemView)
+                 if view.objectName() in ('listView', 'treeView')]
+        ready_view = []
+        directory_notifications = []
+        elapsed = QElapsedTimer()
+        elapsed.start()
+        loop = QEventLoop(dialog)
+        poll = QTimer(loop)
+        poll.setInterval(25)
+        timeout = QTimer(loop)
+        timeout.setSingleShot(True)
+
+        def inspect_entry():
+            parent_index = model.index(str(expected.parent))
+            source_index = model.index(str(expected))
+            if (not parent_index.isValid() or not source_index.isValid()
+                    or source_index.parent() != parent_index
+                    or model.fileName(source_index) != expected.name
+                    or model.rowCount(parent_index) == 0):
+                return
+            for view in views:
+                current_model = view.model()
+                proxies = []
+                while isinstance(current_model, QAbstractProxyModel):
+                    proxies.append(current_model)
+                    current_model = current_model.sourceModel()
+                if current_model != model or not view.isVisible():
+                    continue
+                visible_index = source_index
+                for proxy in reversed(proxies):
+                    visible_index = proxy.mapFromSource(visible_index)
+                if (visible_index.isValid() and view.rootIndex() == visible_index.parent()
+                        and not view.visualRect(visible_index).isEmpty()):
+                    ready_view.append(view.objectName())
+                    loop.quit()
+                    return
+
+        def directory_loaded(path):
+            if Path(path).resolve() == expected.parent.resolve():
+                directory_notifications.append(path)
+                inspect_entry()
+
+        model.directoryLoaded.connect(directory_loaded)
+        poll.timeout.connect(inspect_entry)
+        timeout.timeout.connect(loop.quit)
+        try:
+            inspect_entry()
+            if not ready_view:
+                poll.start()
+                timeout.start(5000)
+                loop.exec()
+            poll.stop()
+            timeout.stop()
+            parent_index = model.index(str(expected.parent))
+            result.setdefault('file_picker_model_entries', {})[name] = {
+                'fixture_name': expected.name,
+                'fixture_parent': str(expected.parent),
+                'entry_visible': bool(ready_view),
+                'visible_view': ready_view[0] if ready_view else None,
+                'model_rows': model.rowCount(parent_index),
+                'directory_loaded_signal_observed': bool(directory_notifications),
+                'wait_ms': elapsed.elapsed(),
+                'timeout_ms': 5000,
+            }
+            check(name + '_fixture_entry_loaded_and_visible', bool(ready_view))
+        finally:
+            poll.stop()
+            timeout.stop()
+            model.directoryLoaded.disconnect(directory_loaded)
+            loop.deleteLater()
+
     def shot(name, widget):
         app.processEvents()
         target = root / (name + '.png')
@@ -96,11 +173,36 @@ def design_probe(output: str) -> int:
         result['screenshots'][name] = str(target)
 
     def native_chrome(name, widget):
+        # Flush zero-delay frame synchronisation before sampling native facts.
+        app.processEvents()
+        app.processEvents()
         controller = getattr(widget, 'chrome', None) or getattr(widget, '_mira_window_chrome')
         diagnostics = controller.native_diagnostics()
         result['window_chrome'][name] = diagnostics
         if diagnostics['enabled']:
             check(name + '_native_caption_absent', diagnostics['window_exists'] and not diagnostics['caption_present'])
+            check(name + '_full_native_client_rect', diagnostics['client_rect'] == diagnostics['window_rect'])
+            rounded = not (widget.isMaximized() or widget.isFullScreen())
+            if diagnostics['corner_backend'] == 'dwm':
+                check(name + '_native_corner_preference', diagnostics['corner_preference'] == (2 if rounded else 1))
+            else:
+                check(name + '_fallback_corner_region', bool(widget.mask().isEmpty()) != rounded)
+            proofs = result.setdefault('composed_corners', {})
+            if name not in proofs:
+                from .corner_capture import composed_corner_proof
+                directory = root / 'corners'
+                directory.mkdir(exist_ok=True)
+                proof = composed_corner_proof(int(widget.winId()), directory / (name + '.png'), rounded=rounded)
+                proofs[name] = proof
+                check(name + '_composed_corner_pixels', proof['passed'])
+        return diagnostics
+
+    def settle_window_state():
+        # Allow Qt's queued native-frame fit and DWM's state transition to finish.
+        loop = QEventLoop(window)
+        QTimer.singleShot(160, loop.quit)
+        loop.exec()
+        app.processEvents()
 
     def safe(callback):
         def run():
@@ -187,13 +289,41 @@ def design_probe(output: str) -> int:
     def acceptance():
         check('main_has_integrated_chrome', bool(window.windowFlags() & Qt.WindowType.FramelessWindowHint)
               and window.header_widget.isAncestorOf(window.chrome.controls))
-        native_chrome('main', window)
+        initial = native_chrome('main', window)
         window.chrome.maximize_button.click()
-        app.processEvents()
+        settle_window_state()
         check('body_maximize_button_maximizes', window.isMaximized())
+        maximized = native_chrome('main-maximized', window)
+        if maximized['enabled']:
+            check('main_maximized_fits_work_area', maximized['window_rect'] == maximized['work_area'])
+        window.chrome.minimize_button.click()
+        settle_window_state()
+        check('body_minimize_from_maximized', window.isMinimized())
+        minimized = window.chrome.native_diagnostics()
+        result['window_chrome']['main-maximized-minimized'] = minimized
+        if minimized['enabled']:
+            rect = minimized['window_rect']
+            check('maximized_minimize_keeps_iconic_rect', rect is not None and rect[0] <= -30000 and rect[1] <= -30000)
+        window.showMaximized()
+        settle_window_state()
+        check('maximized_minimize_restore_state', window.isMaximized() and not window.isMinimized())
+        maximized_restored = native_chrome('main-maximized-restored', window)
+        if maximized_restored['enabled']:
+            check('maximized_minimize_restore_work_area', maximized_restored['window_rect'] == maximized_restored['work_area'])
+        window.showFullScreen()
+        settle_window_state()
+        check('main_fullscreen_state', window.isFullScreen())
+        fullscreen = native_chrome('main-fullscreen', window)
+        if fullscreen['enabled']:
+            check('main_fullscreen_fits_monitor', fullscreen['window_rect'] == fullscreen['monitor_rect'])
+        window.showMaximized()
+        settle_window_state()
         window.chrome.maximize_button.click()
-        app.processEvents()
-        check('body_maximize_button_restores', not window.isMaximized())
+        settle_window_state()
+        check('body_maximize_button_restores', not window.isMaximized() and not window.isFullScreen())
+        restored = native_chrome('main-restored', window)
+        if restored['enabled']:
+            check('main_restore_preserves_native_geometry', restored['window_rect'] == initial['window_rect'])
         window.chrome.minimize_button.click()
         app.processEvents()
         check('body_minimize_button_minimizes', window.isMinimized())
@@ -313,8 +443,15 @@ def design_probe(output: str) -> int:
         prompt.exec()
         check('stock_qt_prompt_body_close_returns', not prompt.isVisible())
         prompt.deleteLater()
+        picker_root = root / 'picker-fixtures'
+        picker_root.mkdir(exist_ok=True)
+        folder_fixture = picker_root / 'collection-check'
+        folder_fixture.mkdir(exist_ok=True)
+        file_fixture = picker_root / 'selection-check.txt'
+        file_fixture.write_text('Offline file-picker acceptance fixture; contains no cookies or account data.\n',
+                                encoding='utf-8')
         for directory, name in ((True, 'folder-picker-integrated-window'), (False, 'file-picker-integrated-window')):
-            def picker_visit(name=name):
+            def picker_visit(name=name, directory=directory):
                 from PySide6.QtWidgets import QFileDialog
                 dialog = QApplication.activeModalWidget()
                 check(name + '_uses_frameless_qt_chooser', isinstance(dialog, QDialog)
@@ -324,13 +461,14 @@ def design_probe(output: str) -> int:
                       and getattr(dialog.file_picker, '_mira_auto_chrome_header', None) is None)
                 native_chrome(name, dialog)
                 from PySide6.QtCore import QUrl
-                dialog.file_picker.setSidebarUrls([QUrl.fromLocalFile(str(root))])
+                dialog.file_picker.setSidebarUrls([QUrl.fromLocalFile(str(picker_root))])
+                wait_for_picker_entry(dialog, folder_fixture if directory else file_fixture, name)
                 shot(name, dialog)
                 dialog.chrome.close_button.click()
             previous_folder = window.destination.text()
             QTimer.singleShot(100, safe(picker_visit))
             selected = window._pick_path('Каталог коллекции' if directory else 'Ваш локальный файл cookies',
-                                         directory=directory, initial=str(root))
+                                         directory=directory, initial=str(picker_root))
             check(name + '_cancel_keeps_destination', not selected and window.destination.text() == previous_folder)
         window.auth_source.setCurrentIndex(window.auth_source.findData('none'))
 

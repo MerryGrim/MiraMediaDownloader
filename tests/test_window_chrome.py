@@ -20,7 +20,7 @@ from mira_media.themes import apply_theme, get_theme
 from mira_media.window_chrome import (
     HTBOTTOM, HTBOTTOMLEFT, HTBOTTOMRIGHT, HTCLIENT, HTLEFT, HTRIGHT,
     HTTOP, HTTOPLEFT, HTTOPRIGHT, _edge_hit_test, _maximized_geometry, install_chrome,
-    install_dialog_chrome_hook,
+    install_dialog_chrome_hook, DWMWCP_DONOTROUND, DWMWCP_ROUND,
 )
 
 
@@ -55,6 +55,92 @@ def test_signed_multimonitor_edge_geometry(point, expected):
 ])
 def test_maximize_uses_monitor_work_area_including_top_left_taskbars(monitor, work, expected):
     assert _maximized_geometry(monitor, work) == expected
+
+
+def test_fallback_corners_follow_size_and_window_state_without_relayout(app, monkeypatch):
+    window = QWidget()
+    window.resize(460, 300)
+    layout = QVBoxLayout(window)
+    field = QLineEdit("unchanged", window)
+    layout.addWidget(field)
+    chrome = install_chrome(window)
+    chrome._windows = type("LegacyWindows", (), {"native_corners": False})()
+    chrome._hwnd = 1
+    monkeypatch.setattr(chrome, "_sync_native", lambda **kwargs: chrome._sync_corners())
+    margins = window.contentsMargins()
+    try:
+        for width, height in ((460, 300), (620, 420)):
+            window.resize(width, height)
+            chrome._sync_corners()
+            assert chrome._corner_backend == "region"
+            assert not window.mask().contains(window.rect().topLeft())
+            assert window.mask().contains(window.rect().center())
+            assert window.mask().boundingRect() == window.rect()
+        for state in (Qt.WindowState.WindowMaximized, Qt.WindowState.WindowFullScreen):
+            window.setWindowState(state)
+            chrome._sync_corners()
+            assert window.mask().isEmpty()
+        window.setWindowState(Qt.WindowState.WindowNoState)
+        chrome._sync_corners()
+        assert not window.mask().isEmpty()
+        assert window.layout() is layout and field.parentWidget() is window
+        assert window.contentsMargins() == margins and field.text() == "unchanged"
+    finally:
+        chrome._windows = None
+        window.deleteLater()
+        app.processEvents()
+
+
+def test_dwm_transition_clears_legacy_region_and_tracks_fullscreen(app, monkeypatch):
+    window = QWidget()
+    window.resize(420, 280)
+    chrome = install_chrome(window)
+    calls = []
+    class DwmWindows:
+        native_corners = True
+        def corners(self, hwnd, rounded):
+            calls.append(rounded)
+            return True
+    chrome._windows = DwmWindows()
+    chrome._hwnd = 1
+    monkeypatch.setattr(chrome, "_sync_native", lambda **kwargs: chrome._sync_corners())
+    try:
+        from mira_media.window_chrome import _rounded_region
+        window.setMask(_rounded_region(window.width(), window.height()))
+        for state, expected in ((Qt.WindowState.WindowNoState, True),
+                                (Qt.WindowState.WindowMaximized, False),
+                                (Qt.WindowState.WindowFullScreen, False),
+                                (Qt.WindowState.WindowNoState, True)):
+            window.setWindowState(state)
+            chrome._sync_corners()
+            assert calls[-1] is expected and window.mask().isEmpty()
+            assert chrome._corner_backend == "dwm"
+    finally:
+        chrome._windows = None
+        window.deleteLater()
+        app.processEvents()
+
+
+def test_minimized_maximized_window_does_not_reposition_its_iconic_hwnd(app, monkeypatch):
+    window = QWidget()
+    chrome = install_chrome(window)
+    class DwmWindows:
+        native_corners = True
+        def monitor(self, hwnd):
+            pytest.fail("A minimized HWND must retain its native restore placement")
+        def corners(self, hwnd, rounded):
+            return True
+    chrome._windows = DwmWindows()
+    chrome._hwnd = 1
+    monkeypatch.setattr(chrome, "_sync_native", lambda **kwargs: chrome._sync_corners())
+    try:
+        window.setWindowState(Qt.WindowState.WindowMaximized | Qt.WindowState.WindowMinimized)
+        assert window.isMaximized() and window.isMinimized()
+        chrome._sync_corners()
+    finally:
+        chrome._windows = None
+        window.deleteLater()
+        app.processEvents()
 
 
 def test_controls_are_accessible_idempotent_and_do_not_become_dialog_default(app):
@@ -349,6 +435,8 @@ def _native_smoke(output: str) -> int:
     def inspect():
         native = chrome.native_diagnostics()
         check("no_standard_caption", not native["caption_present"])
+        check("full_client_without_frame_insets", native["client_rect"] == native["window_rect"])
+        check("normal_corner_policy", native["corner_backend"] == "region" or native["corner_preference"] == DWMWCP_ROUND)
         check("native_style_actions", native["thick_frame"] and native["minimize_box"] and native["maximize_box"])
         rect = native["window_rect"]
         left, top, right, bottom = rect
@@ -369,6 +457,7 @@ def _native_smoke(output: str) -> int:
     def inspect_maximized():
         native = chrome.native_diagnostics()
         check("maximize_state", window.isMaximized())
+        check("maximize_square", native["corner_backend"] == "region" or native["corner_preference"] == DWMWCP_DONOTROUND)
         check("maximize_respects_work_area", all(abs(a - b) <= 1 for a, b in zip(native["window_rect"], native["work_area"])))
         chrome.maximize_button.click()
         QTimer.singleShot(200, safe(inspect_restored))
@@ -387,6 +476,15 @@ def _native_smoke(output: str) -> int:
             result["stock_input_native"] = details
             check("stock_input_no_caption", details["window_exists"] and not details["caption_present"])
             check("stock_input_close_only", not details["minimize_box"] and not details["maximize_box"])
+            check("stock_input_full_client", details["client_rect"] == details["window_rect"])
+            rect = details["window_rect"]
+            point = ((rect[1] + 1) & 0xFFFF) << 16 | ((rect[0] + 1) & 0xFFFF)
+            check("stock_input_resize_hit_disabled", user.SendMessageW(input_dialog._mira_window_chrome._hwnd, 0x0084, 0, point) == HTCLIENT)
+            user.SendMessageW(input_dialog._mira_window_chrome._hwnd, 0x0112, 0xF000, 0)
+            check("stock_input_system_resize_disabled", details["window_rect"] == input_dialog._mira_window_chrome.native_diagnostics()["window_rect"])
+            user.SendMessageW(input_dialog._mira_window_chrome._hwnd, 0x0112, 0xF030, 0)
+            check("stock_input_system_maximize_disabled", not input_dialog.isMaximized() and
+                  details["window_rect"] == input_dialog._mira_window_chrome.native_diagnostics()["window_rect"])
             check("stock_input_value_preserved", input_dialog.textValue() == "local-only QA")
             input_dialog._mira_window_chrome.close_button.click()
         check("stock_input_close_rejects", _inspect_modal(input_dialog, close_input) == QDialog.DialogCode.Rejected)

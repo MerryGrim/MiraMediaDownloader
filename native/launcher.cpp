@@ -351,6 +351,26 @@ void Paint(State& state) {
     if (state.firstPaint < 0) { state.firstPaint = state.elapsed(); state.writeTrace(); }
 }
 
+void UpdateSplashCorners(HWND window) {
+    DWORD preference = IsZoomed(window) ? 1 : 2; // DONOTROUND / ROUND
+    if (SUCCEEDED(DwmSetWindowAttribute(window, 33, &preference, sizeof(preference)))) {
+        SetWindowRgn(window, nullptr, FALSE);
+        DWORD border = 0xFFFFFFFE; // DWMWA_COLOR_NONE
+        DwmSetWindowAttribute(window, 34, &border, sizeof(border));
+        return;
+    }
+    if (IsZoomed(window)) { SetWindowRgn(window, nullptr, TRUE); return; }
+    RECT rect{};
+    if (!GetWindowRect(window, &rect)) return;
+    int radius = MulDiv(8, static_cast<int>(GetDpiForWindow(window)), 96);
+    HRGN shape = CreateRoundRectRgn(0, 0, rect.right - rect.left + 1,
+        rect.bottom - rect.top + 1, radius * 2, radius * 2);
+    HRGN existing = CreateRectRgn(0, 0, 0, 0);
+    bool same = shape && existing && GetWindowRgn(window, existing) != ERROR && EqualRgn(shape, existing);
+    if (existing) DeleteObject(existing);
+    if (shape && (same || !SetWindowRgn(window, shape, TRUE))) DeleteObject(shape);
+}
+
 LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM wparam, LPARAM lparam) {
     State* state = reinterpret_cast<State*>(GetWindowLongPtrW(window, GWLP_USERDATA));
     if (message == WM_NCCREATE) {
@@ -360,6 +380,15 @@ LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM wparam, LPARA
     }
     if (!state) return DefWindowProcW(window, message, wparam, lparam);
     switch (message) {
+    case WM_NCCALCSIZE: return 0; // DWM frame metadata, full-size custom client.
+    case WM_SIZE:
+    case WM_DWMCOMPOSITIONCHANGED:
+        UpdateSplashCorners(window);
+        return 0;
+    case WM_SYSCOMMAND:
+        if ((wparam & 0xFFF0) == SC_SIZE || (wparam & 0xFFF0) == SC_MAXIMIZE) return 0;
+        return DefWindowProcW(window, message, wparam, lparam);
+    case WM_NCLBUTTONDBLCLK: return 0; // Startup remains a fixed-size transient.
     case WM_PAINT: Paint(*state); return 0;
     case WM_ERASEBKGND: return 1;
     case WM_TIMER: InvalidateRect(window, nullptr, FALSE); return 0;
@@ -453,8 +482,9 @@ bool ShowSplash(HINSTANCE instance, State& state) {
     GetMonitorInfoW(MonitorFromPoint(pointer, MONITOR_DEFAULTTOPRIMARY), &monitor);
     int dpi = static_cast<int>(GetDpiForSystem());
     RECT rectangle{ 0, 0, MulDiv(560, dpi, 96), MulDiv(240, dpi, 96) };
-    DWORD style = WS_POPUP;
-    AdjustWindowRectExForDpi(&rectangle, style, FALSE, WS_EX_APPWINDOW, dpi);
+    // Keep enough frame metadata for DWM's rounded-corner policy. NCCALCSIZE
+    // removes the non-client frame, so these are the original body dimensions.
+    DWORD style = WS_POPUP | WS_CAPTION | WS_THICKFRAME;
     int width = rectangle.right - rectangle.left, height = rectangle.bottom - rectangle.top;
     int left = monitor.rcWork.left + (monitor.rcWork.right - monitor.rcWork.left - width) / 2;
     int top = monitor.rcWork.top + (monitor.rcWork.bottom - monitor.rcWork.top - height) / 2;
@@ -467,8 +497,7 @@ bool ShowSplash(HINSTANCE instance, State& state) {
     SendMessageW(window, WM_SETICON, ICON_SMALL, reinterpret_cast<LPARAM>(cls.hIconSm));
     BOOL dark = state.dark;
     DwmSetWindowAttribute(window, 20 /* DWMWA_USE_IMMERSIVE_DARK_MODE */, &dark, sizeof(dark));
-    DWORD corners = 2; // DWMWCP_ROUND; older Windows versions safely ignore it.
-    DwmSetWindowAttribute(window, 33 /* DWMWA_WINDOW_CORNER_PREFERENCE */, &corners, sizeof(corners));
+    UpdateSplashCorners(window);
     ShowWindow(window, SW_SHOWNORMAL);
     UpdateWindow(window); // First real native paint precedes starting Python.
     SetTimer(window, 1, 90, nullptr);

@@ -19,7 +19,7 @@ import sys
 import weakref
 
 from PySide6.QtCore import QAbstractNativeEventFilter, QEvent, QObject, QPoint, QRectF, Qt, QTimer
-from PySide6.QtGui import QColor, QPainter, QPen
+from PySide6.QtGui import QColor, QPainter, QPainterPath, QPen, QRegion
 from PySide6.QtWidgets import (
     QAbstractButton, QAbstractItemView, QAbstractSlider, QAbstractSpinBox,
     QApplication, QComboBox, QDialog, QHBoxLayout, QLabel, QLineEdit, QMenu, QMenuBar,
@@ -37,9 +37,13 @@ WM_GETMINMAXINFO = 0x0024
 WM_SYSCOMMAND = 0x0112
 HTCLIENT, HTLEFT, HTRIGHT, HTTOP = 1, 10, 11, 12
 HTTOPLEFT, HTTOPRIGHT, HTBOTTOM, HTBOTTOMLEFT, HTBOTTOMRIGHT = 13, 14, 15, 16, 17
-SC_MINIMIZE, SC_MAXIMIZE = 0xF020, 0xF030
+SC_SIZE, SC_MINIMIZE, SC_MAXIMIZE = 0xF000, 0xF020, 0xF030
 WS_CAPTION, WS_THICKFRAME = 0x00C00000, 0x00040000
 WS_MINIMIZEBOX, WS_MAXIMIZEBOX, WS_SYSMENU = 0x00020000, 0x00010000, 0x00080000
+DWMWCP_DONOTROUND, DWMWCP_ROUND = 1, 2
+DWMWA_WINDOW_CORNER_PREFERENCE = 33
+WINDOW_CORNER_RADIUS = 8
+_FIXED_WINDOW_GUARDS = {}  # callback lifetime ends with its HWND, not a Qt wrapper
 
 
 class _MSG(ctypes.Structure):
@@ -57,6 +61,13 @@ class _MINMAXINFO(ctypes.Structure):
 class _MONITORINFO(ctypes.Structure):
     _fields_ = [("cbSize", wintypes.DWORD), ("rcMonitor", wintypes.RECT),
                 ("rcWork", wintypes.RECT), ("dwFlags", wintypes.DWORD)]
+
+
+def _rounded_region(width: int, height: int) -> QRegion:
+    path = QPainterPath()
+    radius = min(WINDOW_CORNER_RADIUS, width / 2, height / 2)
+    path.addRoundedRect(QRectF(0, 0, width, height), radius, radius)
+    return QRegion(path.toFillPolygon().toPolygon())
 
 
 def _edge_hit_test(rect: tuple[int, int, int, int], x: int, y: int,
@@ -101,6 +112,68 @@ class _Windows:
         self.api.GetDpiForWindow.restype = wintypes.UINT
         self.api.GetSystemMetricsForDpi.argtypes = [ctypes.c_int, wintypes.UINT]
         self.api.GetSystemMetricsForDpi.restype = ctypes.c_int
+        self.api.GetClientRect.argtypes = [wintypes.HWND, ctypes.POINTER(wintypes.RECT)]
+        self.api.GetClientRect.restype = wintypes.BOOL
+        self.api.ClientToScreen.argtypes = [wintypes.HWND, ctypes.POINTER(wintypes.POINT)]
+        self.api.ClientToScreen.restype = wintypes.BOOL
+        self.dwm = ctypes.WinDLL("dwmapi")
+        self.dwm.DwmSetWindowAttribute.argtypes = [wintypes.HWND, wintypes.DWORD, ctypes.c_void_p, wintypes.DWORD]
+        self.dwm.DwmSetWindowAttribute.restype = ctypes.c_long
+        self.dwm.DwmGetWindowAttribute.argtypes = self.dwm.DwmSetWindowAttribute.argtypes
+        self.dwm.DwmGetWindowAttribute.restype = ctypes.c_long
+        self.native_corners = sys.getwindowsversion().build >= 22000
+
+    def guard_fixed_window(self, hwnd: int):
+        if hwnd in _FIXED_WINDOW_GUARDS:
+            return
+        common = ctypes.WinDLL("comctl32")
+        callback_type = ctypes.WINFUNCTYPE(ctypes.c_ssize_t, wintypes.HWND, wintypes.UINT,
+                                         ctypes.c_size_t, ctypes.c_ssize_t,
+                                         ctypes.c_size_t, ctypes.c_size_t)
+        common.DefSubclassProc.argtypes = [wintypes.HWND, wintypes.UINT, ctypes.c_size_t, ctypes.c_ssize_t]
+        common.DefSubclassProc.restype = ctypes.c_ssize_t
+        common.SetWindowSubclass.argtypes = [wintypes.HWND, callback_type, ctypes.c_size_t, ctypes.c_size_t]
+        common.SetWindowSubclass.restype = wintypes.BOOL
+        common.RemoveWindowSubclass.argtypes = [wintypes.HWND, callback_type, ctypes.c_size_t]
+        common.RemoveWindowSubclass.restype = wintypes.BOOL
+
+        @callback_type
+        def guard(target, message, wparam, lparam, identifier, data):
+            # Sent system commands can bypass Qt's application event filter.
+            # Block sizing at the real HWND procedure, preserving all other
+            # Qt handling and removing the callback when the HWND is destroyed.
+            if message == WM_SYSCOMMAND and (wparam & 0xFFF0) in (SC_SIZE, SC_MAXIMIZE):
+                return 0
+            if message == 0x0082:  # WM_NCDESTROY
+                common.RemoveWindowSubclass(target, guard, identifier)
+                _FIXED_WINDOW_GUARDS.pop(int(target), None)
+            return common.DefSubclassProc(target, message, wparam, lparam)
+
+        if common.SetWindowSubclass(hwnd, guard, 0x4D495241, 0):
+            _FIXED_WINDOW_GUARDS[hwnd] = guard
+
+    def corners(self, hwnd: int, rounded: bool) -> bool:
+        if not self.native_corners:
+            return False
+        preference = wintypes.DWORD(DWMWCP_ROUND if rounded else DWMWCP_DONOTROUND)
+        result = self.dwm.DwmSetWindowAttribute(hwnd, DWMWA_WINDOW_CORNER_PREFERENCE,
+                                               ctypes.byref(preference), ctypes.sizeof(preference))
+        # Suppress only the system outline; Qt still paints the entire body.
+        border = wintypes.DWORD(0xFFFFFFFE)  # DWMWA_COLOR_NONE
+        self.dwm.DwmSetWindowAttribute(hwnd, 34, ctypes.byref(border), ctypes.sizeof(border))
+        return result >= 0
+
+    def corner_preference(self, hwnd: int):
+        preference = wintypes.DWORD()
+        result = self.dwm.DwmGetWindowAttribute(hwnd, DWMWA_WINDOW_CORNER_PREFERENCE,
+                                               ctypes.byref(preference), ctypes.sizeof(preference))
+        return int(preference.value) if result >= 0 else None
+
+    def client_rect(self, hwnd: int):
+        rect, origin = wintypes.RECT(), wintypes.POINT()
+        if self.api.GetClientRect(hwnd, ctypes.byref(rect)) and self.api.ClientToScreen(hwnd, ctypes.byref(origin)):
+            return origin.x, origin.y, origin.x + rect.right, origin.y + rect.bottom
+        return None
 
     def rect(self, hwnd: int) -> tuple[int, int, int, int] | None:
         rect = wintypes.RECT()
@@ -210,6 +283,11 @@ class WindowChrome(QObject):
         self._manual_drag = None
         self._hwnd = 0
         self._syncing = False
+        self._corner_backend = "none"
+        self._fitting_maximized = False
+        self._corner_timer = QTimer(self)
+        self._corner_timer.setSingleShot(True)
+        self._corner_timer.timeout.connect(self._sync_native)
         self._native_counts = {"hit_test": 0, "minmax": 0}
         self._windows = _Windows() if sys.platform == "win32" and QApplication.platformName() == "windows" else None
         self._native_filter = None
@@ -271,6 +349,8 @@ class WindowChrome(QObject):
                 self._hwnd = 0
                 return
             self._hwnd = hwnd
+            if not self.resizable:
+                self._windows.guard_fixed_window(hwnd)
             old = self._windows.api.GetWindowLongW(self._hwnd, -16) & 0xFFFFFFFF
             style = old & ~(WS_CAPTION | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX)
             style |= WS_SYSMENU
@@ -280,11 +360,50 @@ class WindowChrome(QObject):
                 style |= WS_MINIMIZEBOX
             if self.maximizable:
                 style |= WS_MAXIMIZEBOX
+            if self._windows.native_corners and not (window.isMaximized() or window.isFullScreen()):
+                # DWM needs frame metadata even though WM_NCCALCSIZE below
+                # removes the entire non-client area. No caption is drawn.
+                style |= WS_CAPTION | WS_THICKFRAME
             if old != style:
                 self._windows.api.SetWindowLongW(self._hwnd, -16, ctypes.c_long(style).value)
                 self._windows.api.SetWindowPos(self._hwnd, None, 0, 0, 0, 0, 0x0037)
+            self._sync_corners()
         finally:
             self._syncing = False
+
+    def _sync_corners(self):
+        window = self.window
+        if self._windows is None or not self._hwnd or window is None:
+            return
+        rounded = not (window.isMaximized() or window.isFullScreen())
+        if (window.isMaximized() and not window.isMinimized() and not window.isFullScreen() and
+                self._windows.native_corners and not self._fitting_maximized and
+                hasattr(self._windows, "monitor")):
+            monitor = self._windows.monitor(self._hwnd)
+            if monitor and self._windows.rect(self._hwnd) != monitor[1]:
+                # Qt adds the metadata frame to maximized bounds. Since our
+                # non-client area is empty, keep the original work-area body.
+                self._fitting_maximized = True
+                try:
+                    left, top, right, bottom = monitor[1]
+                    self._windows.api.SetWindowPos(self._hwnd, None, left, top,
+                                                   right - left, bottom - top, 0x0014)
+                finally:
+                    self._fitting_maximized = False
+        # A window region disables DWM rounding. Remove our Win10 fallback
+        # before asking the compositor to handle a recreated Win11 surface.
+        if self._windows.native_corners:
+            window.clearMask()
+            if self._windows.corners(self._hwnd, rounded):
+                self._corner_backend = "dwm"
+                return
+        self._corner_backend = "region"
+        if rounded and window.width() > 0 and window.height() > 0:
+            region = _rounded_region(window.width(), window.height())
+            if window.mask() != region:
+                window.setMask(region)
+        else:
+            window.clearMask()
 
     def _native_message(self, msg):
         window = self.window
@@ -294,7 +413,9 @@ class WindowChrome(QObject):
             return True, 0  # entire body is client area, including the header
         if msg.message == WM_SYSCOMMAND:
             command = msg.wParam & 0xFFF0
-            if (command == SC_MINIMIZE and not self.minimizable) or (command == SC_MAXIMIZE and not self.maximizable):
+            if ((command == SC_SIZE and not self.resizable) or
+                    (command == SC_MINIMIZE and not self.minimizable) or
+                    (command == SC_MAXIMIZE and not self.maximizable)):
                 return True, 0
         if msg.message == WM_NCHITTEST:
             self._native_counts["hit_test"] += 1
@@ -330,11 +451,17 @@ class WindowChrome(QObject):
         result = {"enabled": bool(self._windows), "counts": dict(self._native_counts),
                   "resizable": self.resizable, "minimizable": self.minimizable,
                   "maximizable": self.maximizable}
+        result["corner_backend"] = self._corner_backend
         result["window_exists"] = bool(self._windows and self._hwnd and self._windows.api.IsWindow(self._hwnd))
         if result["window_exists"]:
             style = self._windows.api.GetWindowLongW(self._hwnd, -16) & 0xFFFFFFFF
             monitor = self._windows.monitor(self._hwnd)
-            result.update({"caption_present": bool(style & WS_CAPTION),
+            rect, client = self._windows.rect(self._hwnd), self._windows.client_rect(self._hwnd)
+            result.update({"caption_present": bool(style & WS_CAPTION and
+                                                   (client is None or rect is None or client[1] > rect[1])),
+                           "native_caption_style": bool(style & WS_CAPTION),
+                           "client_rect": client,
+                           "corner_preference": self._windows.corner_preference(self._hwnd),
                            "thick_frame": bool(style & WS_THICKFRAME),
                            "minimize_box": bool(style & WS_MINIMIZEBOX),
                            "maximize_box": bool(style & WS_MAXIMIZEBOX),
@@ -417,6 +544,11 @@ class WindowChrome(QObject):
         if watched is window:
             if kind in (QEvent.Type.Show, QEvent.Type.WinIdChange):
                 self._sync_native()
+            if kind == QEvent.Type.WindowStateChange:
+                self._sync_native()
+                self._corner_timer.start(0)  # after Qt finishes native frame placement
+            elif kind == QEvent.Type.Resize:
+                self._sync_corners()
             if kind in (QEvent.Type.WindowStateChange, QEvent.Type.PaletteChange, QEvent.Type.StyleChange):
                 self.refresh()
         if kind == QEvent.Type.ChildAdded and self._is_drag_target(watched):
