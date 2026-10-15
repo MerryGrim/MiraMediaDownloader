@@ -245,7 +245,8 @@ begin
   Result := False;
   for Index := 0 to GetArrayLength(LegacyCrtPaths) - 1 do
   begin
-    FileName := AddBackslash(ExpandConstant('{app}')) + LegacyCrtPaths[Index];
+    if not LegacyCrtPath(LegacyCrtPaths[Index], FileName) then
+      Exit;
     if FileExists(FileName) and not RecognizedLegacyCrt(LegacyCrtPaths[Index]) then
       Exit;
   end;
